@@ -57,7 +57,12 @@ font-weight: 800;
 .container{
  display: flex;
  width: 100%;
+	
 }
+.container::after{
+	content: "";
+	display: table;
+	clear: both;
 .navbar{
  background-color: whitesmoke;
  border-bottom: 5px solid grey;
