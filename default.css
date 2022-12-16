@@ -116,7 +116,7 @@ font-weight: 800;
 .footer{
 	margin-top: 10px;
 	color: whitesmoke;
-	background-color: black;
+	background-color: rgb(40,40,40);
 }
 .footer ul{
 	list-style-type: none;
