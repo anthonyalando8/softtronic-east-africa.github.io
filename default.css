@@ -62,7 +62,8 @@ font-weight: 800;
 .container::after{
 	content: "";
 	display: table;
-	clear: both;
+	clear: both;}
+	
 .navbar{
  background-color: whitesmoke;
  border-bottom: 5px solid grey;
