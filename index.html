@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+
+		<link rel="stylesheet" href="default.css" />
+<script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
+		<title>Softtronic E A | Home</title>
+		<style>
+   *{
+    box-sizing: border-box;
+   }
+    body{
+     font-family: Arial, Helvetica, sans-serif;
+ background-color: #5555;
+ background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-two.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671343538415");
+ background-size: cover;
+ background-repeat: norepeat;
+ padding: 0;
+ margin: 0;
+ font-size: 12px;
+}
+
+header{
+ background-color: whitesmoke;
+}
+header img{ border-radius: 10%}
+header .animate{
+ height: 60px;
+ color: white;
+ background-color: blue;
+}
+.desktop{font-size: 28px;
+display: block;
+font-weight: 800;
+}
+.animate .scroll{
+ position:relative;
+ font-size: 28px;
+ text-align: center;
+ animation-name: scroll;
+ animation-duration: 2s;
+ animation-iteration-count: infinite; animation-timing-function: ease-in-out;
+}
+.animate .zoom{
+ font-size: 28px;
+ animation-name: zoom;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+ animation-timing-function: ease-in-out;
+ text-align:center;
+}
+@keyframes zoom{
+ 0% {
+  font-size: 11px;
+  }
+ 10% {
+   color: black;
+ }
+ 100% {
+  font-size: 28px;}
+}
+@keyframes scroll{
+ from {
+  letter-spacing: normal;
+ }
+ to {
+  letter-spacing: 2px;
+ }
+}
+.container{
+ display: flex;
+ width: 100%;
+}
+.navbar{
+ background-color: white;
+ min-height: 80px;
+ border-radius: 0px 0px 5px 5px;
+ overflow: scroll;
+ }
+ .navbar .right{
+  padding-top:65px;
+ }
+.navbar a{
+ color: black;
+ padding-left: 10px;
+ font-weight: 700;
+ text-decoration: none;
+}
+.navbar a.active{
+ color: brown;
+}
+.desktop .navbar .right{
+ width: 70%;
+}
+.desktop .navbar .left{
+ width: 30%;
+}
+.left{
+ width: 50%;
+ float: left;
+}
+.right{
+ width: 50%;
+ float:right;
+ text-align: right;
+}
+.top{
+ margin-top: 10px;
+}
+.slide-container{
+ background-color: rgb(11,11,69);
+ border-radius: 15px;
+}
+.slides{
+ padding-top: 50px;
+ padding-left: 15px;
+ padding-bottom: 30px;
+ padding-right: 15px;
+ display: none;
+ animation-name: fade;
+ animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+.dots-container{
+ text-align: center;
+}
+.dots-container .active{
+ color: brown;
+ font-weight: bold;
+}
+.nav
+{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	border-radius: 15px;
+	padding: 5px;
+	cursor: pointer;
+}
+.dots{
+ color: white;
+ font-size: 48px;
+ padding: 5px;
+ cursor: pointer;
+}
+.note{
+ padding: 10px;
+ line-height: 1.8;
+ margin-top: 50px;
+ text-align: center;
+ color: white;
+ background-color: rgb(48,48,48,48);
+}
+.consult{
+ padding: 5px;
+ color: white;
+ font-weight: bold;
+ background-color: blue;
+ border: none;
+ border-radius: 10px;
+}
+.centered{
+ text-align: center;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ margin-top: 50px;
+ color: white;
+ /*background-image: url('https://ik.imagekit.io/anthonyalando/Softtronic/networking.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671206618212');*/
+ font-weight: bold;
+ background-size: cover;
+ background-repeat: norepeat;
+ background-color: white;
+ line-height: 1.8;
+ animation-name: background-change;
+ animation-duration: 5s;
+ animation-iteration-count: infinite;
+}
+@keyframes background-change{
+	from {background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-image.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671343538471");}
+	to{background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/networking.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671206618212");}
+}
+.max-width-650px{
+ display: none;
+}
+.gmap_canvas { overflow:hidden;background:none!important;
+height:500px;
+width:100%;
+}
+.mapouter{
+ text-align:right;
+ height:500px;width:100%;
+}
+.main-office{
+	background-color: whitesmoke;
+	margin-top: 20px;
+}
+.location-details{
+ padding-top: 20px;
+ text-align: center;
+}
+ .name{
+  font-size: 20px;
+  color: brown;
+ }
+ .name img{
+  border-radius: 50%;
+ }
+ .details{
+  font-size: 16px;
+  color: green;
+ }
+.footer{
+ margin-top: 10px;
+ color: whitesmoke;
+ background-color: rgb(40,40,40);
+}
+.footer ul{
+ list-style-type: none;
+}
+.footer .right{
+ text-align: center;
+}
+.footer a{
+ text-decoration: none;
+ color: whitesmoke;
+ display: inline-block;
+}
+.developer{
+ color:white;
+ text-align: center;
+ background-color: purple;
+}
+.back-top{
+ position: fixed;
+ top: 70%;
+ left: 90%;
+ background-color: black;
+ border-radius: 50%;
+ font-size: 18px;
+ font-weight: 500;
+ height: 40px;
+ padding: 10px;
+}
+.back-top a{
+ text-decoration: none;
+ color: white;
+ 
+}
+@media (max-width: 650px){
+ .desktop{
+  display: none;
+ }
+ .max-width-650px{
+  display: block;
+ }
+ .consult{width: 100%;}
+ .centered{
+  height: auto;
+ }
+ .location {
+  display: inline-block;
+ }
+ .location .left, .location .right{
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-top: 10px;
+  text-align: center;
+ }
+ .back-top{
+  left: 80%;
+ }
+}
+  
+  
+		</style>
+	</head>
+	<body onload="setInterval(startSlideShow, 5000)">
+		<header>
+			<div class="desktop">
+				<div class="animate container">
+					<div class="left scroll">SOFTTRONIC EAST AFRICA</div>
+					<div class="right zoom">Call +254700536326</div>
+				</div>
+			</div>
+			<div class="max-width-650px    navbar container">
+				<div class="left">
+					<a href="index.html">
+						<img src="https://ik.imagekit.io/anthonyalando/Softtronic/myLogo.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671195391967" alt="Logo" width="80" height="80" />
+
+					</a>
+					<a class="active" href="index.html"><i class="fa fa-fw fa-home"></i></a>
+				</div>
+				<div class="right">
+					<a href="softtronic_services.html">Services</a>
+					<a href="softtronic_login.html"><i class="fa fa-fw fa-user"></i> </a>
+				</div>
+			</div>
+			<div class="desktop">
+				<div class="container navbar">
+					<div class="left">
+						<a href="index.html">
+							<img src="https://ik.imagekit.io/anthonyalando/Softtronic/myLogo.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671195391967" alt="Logo" width="80" height="100%" />
+
+						</a>
+					</div>
+					<div class="right">
+						<a href="softtronic_services.html">Services</a>
+						<a href="#">Contact Us</a>
+						<a href="#">About Us</a>
+						<a href="#"><i class="fa fa-fw fa-user"></i></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="top">
+			<div class="slide-container">
+				<div class="slides">
+					<div class="gallery">
+						<img src="https://ik.imagekit.io/anthonyalando/Softtronic/server.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671211190473" width="100%" height="auto" />
+
+					</div>
+					<div class="note">
+						Simplified experiences will meet the changing needs of our customers
+
+						<br />
+
+						<button class="button consult" onclick="noService()">Free Consultation</button>
+						
+					</div>
+					
+				</div>
+				<div class="slides">
+					<div class="gallery">
+						<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software-installation.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671269169185" width="100%" alt="Software Installation">
+						</div>
+						<div class="note">
+							We specialize in installation and configuring all types of software! Services.
+							</div>
+							</div>
+							<div class="slides">
+								<div class="gallery">
+									<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-camera.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671269168780" width="100%" alt="cctv installation">
+										</div>
+										<div class="note">We supply and install security cameras for your home or business at affordable prices. Secure your home today without breaking the bank</div>
+								</div>
+				<div class="dots-container">
+					<i class="nav" onclick="plusSlide(-1)"> ❮ </i>
+					<i class="dots active">•</i>
+					<i class="dots">•</i>
+					<i class="dots">•</i>
+					<i class="nav" onclick="plusSlide(1)"> ❯ </i>
+				</div>
+			</div>
+			</div>
+			<div class="centered">
+				<div class="max-width-650px">
+					<div class="animate">
+						<div class="scroll">SOFTTRONIC EAST AFRICA</div>
+					</div>
+				</div>We practice solution-focused technologies, and we can help you tap into your unavailable solutions and uncover your org.<br /> Helping you understand and resolve challenges in your org is our primary focus. <br />Through enhancing your personal tools, we can help you grow in all areas of your businesses technically.
+			</div>
+			<div class="main-office">
+				<div class="location container">
+					<div class="left">
+						<div class="mapouter">
+							<div class="gmap_canvas">
+								<iframe width="100%" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=Mache%20Plaza%201st%20Floor%20Suit%20No.%203&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+								<a href="https://123movies-to.org"></a>
+								<br />
+
+								<a href="https://www.embedgooglemap.net">google maps html embed</a>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="location-details">
+							<div class="name">SOFTTRONIC EAST AFRICA</div>
+							<div class="details">Mache Plaza 1st Floor Suit No. 3</div>
+							<div class="name">
+								<img src="https://ik.imagekit.io/anthonyalando/Images/avatar2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669121603923 " width="60%" alt="Founder" />
+
+								<br />
+
+								Paul M Omukuyia
+
+								<hr />
+
+							</div>
+							<div class="details">
+								Technical Engineer
+
+								<br />
+
+								+254720259844
+
+								<br />
+
+								softroniceastafrica@gmail.com
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="max-width-650px">
+					<div class="container footer">
+						<div class="left">
+							<ul>
+								<b>Contacts</b>
+								<li>254700536326</li>
+								<li>254702511706</li>
+								<li>254796211581</li>
+							</ul>
+						</div>
+						<div class="right">
+							<ul>
+								<li>
+									<a href="">Privacy policy</a>
+								</li>
+								<li>
+									<a href="">T&C</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="desktop">
+					<div class="container footer">
+						<div class="left">
+							<div class="container">
+								<div class="left">
+									<ul>
+										<b>Contacts</b>
+										<li>254700536326</li>
+										<li>254702511706</li>
+										<li>254796211581</li>
+									</ul>
+								</div>
+								<div class="right">
+									<ul>
+										<li>
+											<a href="">Descover</a>
+										</li>
+										<li>
+											<a href="">Offers</a>
+										</li>
+										<li>
+											<a href="">Locations</a>
+										</li>
+										<li>
+											<a href="">Quotations</a>
+										</li>
+										<li>
+											<a href="">Schedule</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="container">
+								<div class="left">
+									<ul>
+										<li>
+											<a href="">Privacy policy</a>
+										</li>
+										<li>
+											<a href="">T&C</a>
+										</li>
+										<li>
+											<a href="">Chat</a>
+										</li>
+									</ul>
+								</div>
+								<div class="right">
+									<ul>
+										<b>Follow Us
+											<b></b>
+										</b>
+										<li>
+											<b>
+												<b>
+													<a href="">Whatsapp</a>
+												</b>
+											</b>
+										</li>
+										<li>
+											<a href="">Twitter</a>
+										</li>
+										<li>
+											<a href="">Facebook</a>
+										</li>
+										<li>
+											<a href="">TikTok</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="developer">Copyright 2022 @Anthony</div>
+				<div class="back-top">
+					<a href="#">Top</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script>
+     function noService(){
+      alert('Service unavailable. \nTry again later.');
+     }
+						</script>
+		<script>
+ /*document.getElementsByClassName("dots").addEventListener("click", plusSlide(1));*/
+ let slideIndex = 1;
+ showSlide(slideIndex);
+ function plusSlide(n){
+  showSlide(slideIndex += n);
+ }
+ function startSlideShow(){
+ 	plusSlide(1);
+ }
+ function currentSlide(n) {
+  showSlide(slideIndex = n);
+}
+ function showSlide(n){
+ 	
+  let i;
+  let slide;
+  slide = document.getElementsByClassName("slides");
+  let dot = document.getElementsByClassName("dots");
+  if(n > slide.length){
+   slideIndex = 1;
+  }
+  if(n < 1){
+   slideIndex = slide.length;
+  }
+  for(i = 0; i<slide.length; i++){
+   slide[i].style.display = "none";
+  }
+  for (i = 0; i < dot.length; i++) {
+    dot[i].className = dot[i].className.replace(" active", "");
+  }
+  slide[slideIndex - 1].style.display = "block";
+  dot[slideIndex-1].className += " active";
+ }
+ 
+     
+					</script>
+	</body>
+</html>
