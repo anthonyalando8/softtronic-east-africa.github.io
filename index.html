@@ -10,9 +10,10 @@
 		<title>Softtronic E A | Home</title>
 		<style>
 			header .animate{
-				height: 60px;
+				height: auto;
 				color: white;
-				background-color: blue;
+				background-color: rgb(72,72,72);
+				font-weight: bold;
 			}
 			.navbar{
 				min-height: 60px;
@@ -45,10 +46,16 @@
 			.right{
 				width: 50%;
 				float:right;
+			}
+			.navbar .right{
 				text-align: right;
 			}
-			.top{
+			.main{
 				margin-top: 10px;
+				padding-top: 5px;
+				padding-left: 60px;
+				padding-right: 20px;
+				padding-bottom: 10px;
 			}
 			.consult{
 				padding: 5px;
@@ -58,6 +65,22 @@
 				border: none;
 				border-radius: 10px;
 			}
+			.heading{
+				color: orange;
+				font-size: 36px;
+				border-bottom: 1px solid grey;
+			}
+			.fa-net{
+				font-size: 70px;
+			}
+			.right .service {
+				width: 70%;
+				margin: auto;
+				background-color: rgb(184, 184, 252);
+				padding: 10px;
+				border-radius: 10px;
+			}
+			
 			.centered{
 				animation-name: background-change;
 				animation-duration: 5s;
@@ -68,9 +91,13 @@
 					background-color: rgb(96, 96, 233);
 					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-image.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671343538471");
 				}
+				/*50% {
+					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/pexels-brett-sayles-background-image_1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671790289748");
+					}*/
+
 				to{
 					background-color: rgb(32, 32, 175);
-					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/networking.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671206618212");
+					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-image-center-one_1_.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671790325422");
 				}
 			}
 			.gmap_canvas {
@@ -102,10 +129,20 @@
 				font-size: 16px;
 				color: green;
 			}
-			
 			@media (max-width: 650px){
 				.consult{
 					width: 100%;
+				}
+				.mySlides .left,.mySlides .right{
+					float: left;
+					width: 100%;
+				}
+				.main{
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+				.right .service{
+					width: 90%;
 				}
 				.location {
 				display: inline-block;
@@ -116,9 +153,6 @@
 					float: left;
 					margin-top: 10px;
 					text-align: center;
-				}
-				.container{
-					display: inline-block;
 				}
 			}
 		</style>
@@ -133,7 +167,7 @@
 			</div>
 			<div class="max-width-650px navbar container">
 				<div class="left">
-					<a href="index.html">SOFTTRONIC</a>
+					<a class="logo" href="index.html">S E A</a>
 				</div>
 				<div class="right">
 					<a href="softtronic_services.html">Services</a>
@@ -143,7 +177,7 @@
 			<div class="desktop">
 				<div class="container navbar">
 					<div class="left">
-						<a href="index.html">SOFTTRONIC</a>
+						<a class="logo" href="index.html">SOFTTRONIC</a>
 					</div>
 					<div class="right">
 						<a href="softtronic_services.html">Services</a>
@@ -154,42 +188,6 @@
 				</div>
 			</div>
 		</header>
-		<div class="top">
-			<div class="slide-container">
-				<div class="slides">
-					<div class="gallery">
-						<img src="https://ik.imagekit.io/anthonyalando/Softtronic/comp-programming.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671388039634" />
-					</div>
-					<div class="note">
-						Simplified experiences will meet the changing needs of our customers
-						<br />
-						<button class="button consult" onclick="noService()">Free Consultation</button>
-					</div>
-				</div>
-				<div class="slides">
-					<div class="gallery">
-						<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software_installation.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671450001354" alt="Software Installation">
-					</div>
-					<div class="note">
-						We specialize in installation and configuring all types of software! Services.
-					</div>
-				</div>
-				<div class="slides">
-					<div class="gallery">
-						<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-camera.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671450201127"alt="cctv installation">
-					</div>
-					<div class="note">
-						We supply and install security cameras for your home or business at affordable prices. Secure your home today without breaking the bank</div>
-				</div>
-				<div class="dots-container">
-						<i class="nav" onclick="plusSlide(-1)"> ❮ </i>
-						<i class="dots active">•</i>
-						<i class="dots">•</i>
-						<i class="dots">•</i>
-						<i class="nav" onclick="plusSlide(1)"> ❯ </i>
-				</div>
-			</div>
-		</div>
 		<div class="centered">
 			<div class="max-width-650px">
 				<div class="animate">
@@ -202,39 +200,105 @@
 			Helping you understand and resolve challenges in your org is our primary focus. <br />
 			Through enhancing your personal tools, we can help you grow in all areas of your businesses technically.
 		</div>
-		<div class="main-office">
-			<div class="location container">
+		<div class="main">
+			<div class="container mySlides">
 				<div class="left">
-					<div class="mapouter">
-						<div class="gmap_canvas">
-							<iframe width="100%" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=Mache%20Plaza%201st%20Floor%20Suit%20No.%203&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-							</iframe>
-							<a href="https://123movies-to.org"></a>
-							<br />
-							<a href="https://www.embedgooglemap.net">google maps html embed</a>
+					<div class="slide-container">
+						<div class="slides">
+							<div class="gallery">
+								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/comp-programming.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671388039634" />
+							</div>
+							<div class="note">
+								Simplified experiences will meet the changing needs of our customers
+								<br />
+								<button class="button consult" onclick="noService()">Free Consultation</button>
+							</div>
 						</div>
-					</div>
+						<div class="slides">
+							<div class="gallery">
+								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software_installation.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671450001354" alt="Software Installation">
+							</div>
+							<div class="note">
+								We specialize in installation and configuring all types of software! Services.
+							</div>
+						</div>
+						<div class="slides">
+							<div class="gallery">
+								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-camera.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671450201127"alt="cctv installation">
+							</div>
+							<div class="note">
+								We supply and install security cameras for your home or business at affordable prices. Secure your home today without breaking the bank
+							</div>
+						</div>
+						<div class="dots-container">
+							<i class="nav" onclick="plusSlide(-1)"> ❮ </i>
+							<i class="dots active">•</i>
+							<i class="dots">•</i>
+							<i class="dots">•</i>
+							<i class="nav" onclick="plusSlide(1)"> ❯ </i>
+						</div>
+					</div>		
 				</div>
 				<div class="right">
-					<div class="location-details">
-						<div class="name">
-							SOFTTRONIC EAST AFRICA
+					When it comes to fulfilling business requirements and challenges, 
+					Softtronic provides the most advanced Information and a Communication Technology (ICT) products,
+					 services and solutions.
+					 <p class="heading">Why Choose Us?</p>
+					 <p>Our unique business model is based on configuring, integrating and mainting 
+						innovative business solutions designed to meet our clients’ strategic and 
+						operational needs, we call this Connective Intelligence.
+					</p>
+					<p>
+						Our customers have always been our focus, and in the future, we will continue to focus 
+						on providing excellent, effective and innovative solutions that strengthen and improve 
+						our clients’ businesses.
+					</p>
+					<div class="service">
+						<i class="fa-solid fa-network-wired fa-net"></i><br />
+						<p>Networking</p>
+						<p>Softtronic Networking Services provide a single vision that ensures your network
+							 is ready to rapidly respond to changing business needs across multiple devices, 
+							 applications and locations. We help you achieve a simplified, agile, cost-effective 
+							 and security-rich networking infrastructure that can support innovation and deliver 
+							 business value.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="main-office">
+				<div class="location container">
+					<div class="left">
+						<div class="mapouter">
+							<div class="gmap_canvas">
+								<iframe width="100%" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=Mache%20Plaza%201st%20Floor%20Suit%20No.%203&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+								</iframe>
+								<a href="https://123movies-to.org"></a>
+								<br />
+								<a href="https://www.embedgooglemap.net">google maps html embed</a>
+							</div>
 						</div>
-						<div class="details">
-							Mache Plaza 1st Floor Suit No. 3
-						</div>
-						<div class="name">
-							<img src="https://ik.imagekit.io/anthonyalando/Images/avatar2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669121603923 " width="60%" alt="Founder" />
-							<br />
-							Paul M Omukuyia
-							<hr />
-						</div>
-						<div class="details">
-							Technical Engineer
-							<br />
-							+254720259844
-							<br />
-							softroniceastafrica@gmail.com
+					</div>
+					<div class="right">
+						<div class="location-details">
+							<div class="name">
+								SOFTTRONIC EAST AFRICA
+							</div>
+							<div class="details">
+								Mache Plaza 1st Floor Suit No. 3
+							</div>
+							<div class="name">
+								<img src="https://ik.imagekit.io/anthonyalando/Images/avatar2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669121603923 " width="60%" alt="Founder" />
+								<br />
+								Paul M Omukuyia
+								<hr />
+							</div>
+							<div class="details">
+								Technical Engineer
+								<br />
+								+254720259844
+								<br />
+								softroniceastafrica@gmail.com
+							</div>
 						</div>
 					</div>
 				</div>
