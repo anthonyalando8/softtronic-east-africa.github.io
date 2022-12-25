@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
 *{
-box-sizing: border-box;
+	box-sizing: border-box;
 }
 body{
-	font-family: Arial, Helvetica, sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: 'Manjari', sans-serif;
 	background-color: white;
 	padding: 0;
 	margin: 0;
-	font-size: 12px;
+	font-size: 16px;
 }
 header{
 	background-color: white;
@@ -68,6 +71,9 @@ header img{
  padding-left: 10px;
  text-decoration: none;
 }
+.navbar a.logo{
+	font-family: 'Orbitron', sans-serif;
+}
 .navbar a.active{
  color: brown;
 }
@@ -77,11 +83,57 @@ header img{
 .desktop .navbar .left{
  width: 30%;
 }
+.sidenav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(11,11,69);
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .closebtn{
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+.mySlides{
+	animation-name: slide-bg-change;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/*@keyframes slide-bg-change{
+	from{
+		background-image: url('https://ik.imagekit.io/anthonyalando/Softtronic/Vector_2640.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671813428358');
+	}
+	to {
+		background-image: url('https://ik.imagekit.io/anthonyalando/Softtronic/abstract-futuristic-background-with-3d-design.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671814539801');
+	}
+}*/
+.mySlides .right{
+	text-align: center;
+	padding-top: 50px;
+	padding-left: 5px;
+}
 .slide-container{
 	background-color: rgb(11,11,69);
 	border-radius: 15px;
-	width: 60%;
-	margin: auto;
+	width: 100%;
 	text-align: center;
 }
 .slide-container img{
@@ -131,6 +183,7 @@ header img{
 	text-align: center;
 	color: white;
 	background-color: rgb(48,48,48,48);
+	min-height: 80px;
 }
 .centered{
 	text-align: center;
@@ -191,11 +244,13 @@ header img{
 	.max-width-650px{
 		display: block;
 	}
+	.sidenav {padding-top: 15px;}
+  	.sidenav a {font-size: 18px;}
 	.desktop{
 		display: none;
 	}
-	.slide-container{
-		width: 100%;
+	.container{
+		display: inline-block;
 	}
 	.slide-container img{
 		height: 300px;
