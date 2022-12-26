@@ -3,8 +3,40 @@
 *{
 	box-sizing: border-box;
 }
+.loading{
+	color: rgb(11,11,69);
+	font-family: 'Orbitron', sans-serif;
+	background-color: transparent;
+	position: absolute;
+	top: calc(50% - (100px / 2));
+	left: calc(50% - (100px / 2));
+	font-weight: bolder;
+}
+.sea_loader{
+	margin-top: 10px;
+	background-color: transparent;
+	font-family: 'Orbitron', sans-serif;
+	color: rgb(11,11,69);
+	width: 100px;
+	height: 100px;
+	border: 10px solid rgb(231, 231, 241);
+	border-top:10px solid rgb(11,11,69) ;
+	border-radius: 50%;
+	padding-top: 35px;
+	text-align: center;
+	font-weight: bolder;
+	-webkit-animation: loading 1s linear infinite; /* Safari */
+  	animation: loading 1s linear infinite;
+}
+#content-copy{
+	cursor: pointer;
+}
+@keyframes loading{
+	to{
+		transform: rotateZ(360deg);
+	}
+}
 body{
-	/*font-family: Arial, Helvetica, sans-serif;*/
 	font-family: 'Manjari', sans-serif;
 	background-color: white;
 	padding: 0;
@@ -13,9 +45,6 @@ body{
 }
 header{
 	background-color: white;
-}
-header img{
-	border-radius: 10%
 }
 .desktop{
 	display: block;
@@ -72,7 +101,7 @@ header img{
  text-decoration: none;
 }
 .navbar a.logo{
-	font-family: 'Orbitron', sans-serif;
+ font-family: 'Orbitron', sans-serif;
 }
 .navbar a.active{
  color: brown;
@@ -117,14 +146,6 @@ header img{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-/*@keyframes slide-bg-change{
-	from{
-		background-image: url('https://ik.imagekit.io/anthonyalando/Softtronic/Vector_2640.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671813428358');
-	}
-	to {
-		background-image: url('https://ik.imagekit.io/anthonyalando/Softtronic/abstract-futuristic-background-with-3d-design.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671814539801');
-	}
-}*/
 .mySlides .right{
 	text-align: center;
 	padding-top: 50px;
@@ -202,6 +223,7 @@ header img{
 .max-width-650px{
 	display: none;
 }
+
 .footer{
 	line-height: 1.5;
 	margin-top: 10px;
@@ -227,18 +249,23 @@ header img{
 }
 .back-top{
 	position: fixed;
-	top: 70%;
+	top: 80%;
 	left: 90%;
 	background-color: black;
 	border-radius: 50%;
 	font-size: 18px;
-	font-weight: 500;
-	height: 40px;
+	font-weight: bolder;
+	height: 50px;
+	width: 50px;
 	padding: 10px;
 }
 .back-top a{
 	text-decoration: none;
 	color: white;
+	position: absolute;
+	top: 30%;
+	width: 90%;
+	margin: auto;
 }
 @media (max-width: 650px){
 	.max-width-650px{
