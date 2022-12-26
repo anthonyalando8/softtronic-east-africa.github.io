@@ -4,8 +4,9 @@
 		<meta charset="UTF-8" />
 
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-
+		<link rel="shortcut icon" href="Favicon.ico">
 		<link rel="stylesheet" href="default.css" />
+		<script src="Default_script.js"></script>
 		<script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
 		<title>Softtronic E A | Home</title>
 		<style>
@@ -70,17 +71,37 @@
 				font-size: 36px;
 				border-bottom: 1px solid grey;
 			}
-			.fa-net{
+			.fa-solid{
 				font-size: 70px;
 			}
-			.right .service {
+			.right .slide-two{
 				width: 70%;
+				height: 280px;
 				margin: auto;
 				background-color: rgb(184, 184, 252);
 				padding: 10px;
-				border-radius: 10px;
+				border-bottom:1px solid rgb(56, 55, 55);
+				border-top: 1px solid rgb(56, 55, 55);
+				border-radius: 50% 50% 50% 50% / 50px;
+				overflow: hidden;
+				animation-name: bg;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
 			}
-			
+			.slide-rotate
+			{
+				display: none;
+				overflow: hidden;
+				height: auto;
+			}
+			@keyframes bg{
+				from {
+					background: linear-gradient(to left, rgb(184, 184, 252) 0%, rgb(219, 219, 245) 100%);
+				}
+				to{
+					background: linear-gradient(to left, rgb(219, 219, 245) 0%, rgb(184, 184, 252) 100%);
+				}
+			}
 			.centered{
 				animation-name: background-change;
 				animation-duration: 5s;
@@ -91,14 +112,18 @@
 					background-color: rgb(96, 96, 233);
 					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-image.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671343538471");
 				}
-				/*50% {
-					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/pexels-brett-sayles-background-image_1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671790289748");
-					}*/
-
 				to{
 					background-color: rgb(32, 32, 175);
 					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-image-center-one_1_.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671790325422");
 				}
+			}
+			.gallery{
+				transform: scale(0.98);
+				transition: scale 2s;
+			}
+			.gallery:hover{
+				opacity: 0.4;
+				transform: scale(1.0);
 			}
 			.gmap_canvas {
 				overflow:hidden;
@@ -113,6 +138,7 @@
 			.main-office{
 				background-color: whitesmoke;
 				margin-top: 20px;
+				
 			}
 			.location-details{
 				padding-top: 20px;
@@ -141,8 +167,9 @@
 					padding-left: 5px;
 					padding-right: 5px;
 				}
-				.right .service{
+				.right .slide-two{
 					width: 90%;
+					height: 350px;
 				}
 				.location {
 				display: inline-block;
@@ -155,6 +182,11 @@
 					text-align: center;
 				}
 			}
+			/*.sticky{
+				position: fixed;
+				top: 0%;
+				width: 100%;
+			}*/
 		</style>
 	</head>
 	<body onload="setInterval(startSlideShow, 5000)">
@@ -165,7 +197,7 @@
 					<div class="right zoom">Call +254700536326</div>
 				</div>
 			</div>
-			<div class="max-width-650px navbar container">
+			<div class="max-width-650px navbar container" id="navbar">
 				<div class="left">
 					<a class="logo" href="index.html">S E A</a>
 				</div>
@@ -175,7 +207,7 @@
 				</div>
 			</div>
 			<div class="desktop">
-				<div class="container navbar">
+				<div class="container navbar" id="navbar">
 					<div class="left">
 						<a class="logo" href="index.html">SOFTTRONIC</a>
 					</div>
@@ -188,6 +220,9 @@
 				</div>
 			</div>
 		</header>
+		<div class="loading" id="loading">SOFTTRONIC
+			<div class="sea_loader" id="sea_loader">S E A</div>
+		</div>
 		<div class="centered">
 			<div class="max-width-650px">
 				<div class="animate">
@@ -204,8 +239,8 @@
 			<div class="container mySlides">
 				<div class="left">
 					<div class="slide-container">
-						<div class="slides">
-							<div class="gallery">
+						<div class="slides" id="slides">
+							<div class="gallery" id="gallery">
 								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/comp-programming.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671388039634" />
 							</div>
 							<div class="note">
@@ -214,16 +249,16 @@
 								<button class="button consult" onclick="noService()">Free Consultation</button>
 							</div>
 						</div>
-						<div class="slides">
-							<div class="gallery">
+						<div class="slides" id="slides">
+							<div class="gallery" id="gallery">
 								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software_installation.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671450001354" alt="Software Installation">
 							</div>
 							<div class="note">
 								We specialize in installation and configuring all types of software! Services.
 							</div>
 						</div>
-						<div class="slides">
-							<div class="gallery">
+						<div class="slides" id="slides">
+							<div class="gallery" id="gallery">
 								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-camera.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671450201127"alt="cctv installation">
 							</div>
 							<div class="note">
@@ -253,15 +288,35 @@
 						on providing excellent, effective and innovative solutions that strengthen and improve 
 						our clients’ businesses.
 					</p>
-					<div class="service">
-						<i class="fa-solid fa-network-wired fa-net"></i><br />
-						<p>Networking</p>
-						<p>Softtronic Networking Services provide a single vision that ensures your network
-							 is ready to rapidly respond to changing business needs across multiple devices, 
-							 applications and locations. We help you achieve a simplified, agile, cost-effective 
-							 and security-rich networking infrastructure that can support innovation and deliver 
-							 business value.
-						</p>
+					<div class="slide-two">
+						<div class="slide-rotate">
+							<i class="fa-solid fa-network-wired fa-net"></i><br />
+							<p><b>Networking</b></p>
+							<p>Softtronic Networking Services provide a single vision that ensures your network
+								is ready to rapidly respond to changing business needs across multiple devices, 
+								applications and locations. We help you achieve a simplified, agile, cost-effective 
+								and security-rich networking infrastructure that can support innovation and deliver 
+								business value.
+							</p>
+						</div>
+						<div class="slide-rotate">
+							<i class="fa-solid fa-computer fa-net"></i>
+							<br />
+							<p><b>IT Consultancy</b></p>
+							<p>Our information and communications technology (ICT) consultancy ensures 
+								technology not only meets the requirements of its users but that it is implemented 
+								and managed to realise the promised benefits
+							</p>
+						</div>
+						<div class="slide-rotate">
+							<i class="fa-solid fa-lock fa-net"></i>
+							<br />
+							<p><b>Smart Security</b></p>
+							<p>Softcom has the State-of-the-art access control software that integrates the 
+								most advanced security technologies with innovative networking capabilities to 
+								bring you full-featured security solutions
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -329,9 +384,12 @@
 						<div class="left">
 							<ul>
 								<b>Contacts</b>
-								<li>254700536326</li>
-								<li>254702511706</li>
-								<li>254796211581</li>
+								<li id="content-copy">254700536326</li>
+								<li id="content-copy">254702511706</li>
+								<li id="content-copy">254796211581</li>
+								<script>
+									document.getElementById("content-copy").addEventListener("click", copyToClipboard);
+								</script>
 							</ul>
 						</div>
 						<div class="right">
@@ -370,7 +428,7 @@
 		<div class="developer">
 			Copyright 2022 @Anthony
 		</div>
-		<div class="back-top">
+		<div class="back-top" id="back-top">
 			<a href="#">Top</a>
 		</div>
 		
@@ -380,18 +438,35 @@
 			alert('Service unavailable. \nTry again later.');
 			}
 		</script>
+		<!--<script>
+			window.onscroll = function() {myFunction()};
+			
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset > sticky) {
+				navbar.classList.add("sticky");
+			  } else {
+				navbar.classList.remove("sticky");
+			  }
+			}
+			</script>-->
 		<script>
 			/*document.getElementsByClassName("dots").addEventListener("click", plusSlide(1));*/
 			let slideIndex = 1;
 			showSlide(slideIndex);
+			rotateSlide(slideIndex = 1);
 			function plusSlide(n){
 				showSlide(slideIndex += n);
+				rotateSlide(slideIndex += n);
 			}
 			function startSlideShow(){
 				plusSlide(1);
 			}
 			function currentSlide(n) {
 				showSlide(slideIndex = n);
+				rotateSlide(slideIndex = n);
 			}
 			function showSlide(n){
 				let i;
@@ -413,6 +488,20 @@
 				slide[slideIndex - 1].style.display = "block";
 				dot[slideIndex-1].className += " active";
 			}	
+			function rotateSlide(n){
+				let i;
+				let slide = document.getElementsByClassName("slide-rotate");
+				if(n > slide.length){
+					slideIndex = 1;
+				}
+				if(n < 1){
+				slideIndex = slide.length;
+				}
+				for(i = 0; i<slide.length; i++){
+					slide[i].style.display = "none";
+				}
+				slide[slideIndex - 1].style.display = "block";
+			}
 		</script>
 	</body>
 </html>
