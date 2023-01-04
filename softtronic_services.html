@@ -9,168 +9,76 @@
 		<script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
 		<title>Softtronic E A | Services</title>
 		<style>
-      body{
-        margin: 0;
-        padding: 0;
-      }
-      .animate{
-      text-align: center;
-      border-bottom: 1px solid grey;
-      }
-      .navbar{
-      display: flex;
-      padding: 10px;
-      min-height: 40px;
-      padding-top: 30px;
-      font-size: 24px;
-      font-weight: bold;
-      }
-      .navbar .right{
-      text-align: right;
-      }
       .navbar button{
-      border: none;
-      background-color: white;
-      font-size: 24px;
-      font-weight: bold;
-      cursor: pointer;
+        background-color: transparent;
       }
-      .navbar a{
-      text-decoration: none;
-      color: rgb(11,11,69);
-      }
-      .top, .bottom{
-      height: 200px;
-      color: white;
-      background-color: rgb(11,11,69);
-      line-height: 1.5;
-      }
-      .top .prior-service{
-      padding-top: 30px;
-      font-size: 36px;
-      font-weight: bold;
-      }
-      article{
-      padding-top: 5px;
-      padding-left: 60px;
-      padding-right: 20px;
-      padding-bottom: 10px;
+      .height-200px{
+        height: 200px;
+        color: white;
+        background-color: rgb(11,11,69);
+        line-height: 1.5;
+        padding-left: 5px;
       }
       .service-desc{
-      font-size: 11.5px;
-      line-height: 1.8;
+        line-height: 1.5;
       }
       .services{
-      text-align:center;
-      line-height: 2.8;
-      }
-      .services ul li{
-      list-style-type: none;
-      }
-      .services ul{
-      padding-left: 0;
-      }
-      .services ul li a{
-      color: rgb(11,11,69);
-      }
-      .left{
-      width: 60%;
-      float:left;
-      }
-      .right{
-      width: 40%;
-      float: left;
+        line-height: 2.8;
       }
       .split{
-      float: left;
-      width: 26.6%;
-      text-align: center;
-      background-color: whitesmoke;
-      margin-top: 30px;
-      margin-left: 6.6%;
-      border-radius: 15px;
+        width: 26.6%;
+        background-color: whitesmoke;
+        margin-top: 30px;
+        margin-left: 6.6%;
+        border-radius: 15px;
       }
       .split .pro-num{
-      width: 30%;
-      margin: auto;
-      font-weight: bold;
-      color: rgb(11,11,69);
-      font-size: 72px;
-      border-radius: 50%;
-      border: 10px solid rgb(11,11,69);
-      }
-      .split .procedure{
+        width: 30%;
+        margin: auto;
         font-weight: bold;
+        color: rgb(11,11,69);
+        font-size: 70px;
+        border-radius: 50%;
+        border: 10px solid rgb(11,11,69);
       }
       section{
-      text-align: center;
-      padding-top:10px;
-      border-top: 1px solid grey;
-      border-bottom: 1px solid grey;
-      }
-      section i{
-      color: rgb(11,11,69);
-      font-size: 24px;
-      }
-      section div{
-      padding-top: 25px;
-      padding-bottom: 35px;
-      }
-      .bottom{
-        text-align: center;
-        padding-top: 50px;
-      }
-      .bottom p{
-        font-size: 20px;
-        font-weight: bold;
+        border-top: 1px solid rgb(211,206,206);
       }
       .bottom a{
-        text-decoration: none;
-        border: 2px solid white;
+        border: 2px solid rgb(211,206,206);
         border-radius: 5px;
-        font-size: 20px;
-        font-weight: bold;
         color: white;
         padding: 5px;
         background-color: transparent;
       }
       @media (max-width: 650px){
-        .top{
-          padding-left: 5px;
-        }
-        article{
-          padding-left: 5px;
-        }
-        .container{
-          width: 100%;
-          display: inline-block;
-        }
-        .container .left,  .container .right{
-          width: 100%;
-          text-align: left;
-        }
-        .container .split{
-          text-align: center;
+        .s-sixth, .s-forth{
+          line-height: 1.5;
           width: 90%;
-          margin-left: 5%;
+          padding-left: 5px;
+        }
+        .container .split 
+        {
+          padding: 0;
+          margin: 0;
+          width: 100%;
         }
       }
   
 		</style>
 	</head>
 	<body>
-    
 		<header>
-			<div class="animate">
+			<div class="t-center border-grey">
 				<p>Opening time: Mon-Sat 08:00-21:00</p>
 				<p>Call now: <i id="content-copy">+254 720 259 844</i></p>
 			</div>
-			<div class="navbar">
-				<div class="left">
-					<a class="logo"href="index.html">SOFTTRONIC</a>
+			<div class="navbar container">
+				<div class="left s-sixth">
+					<a class="logo a"href="index.html">SOFTTRONIC</a>
 				</div>
-				<div class="right">
-					<button class="button" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+				<div class="right s-forth">
+					<button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
 				</div>
 			</div>
       <div class="sidenav" id="mysidenav">
@@ -190,15 +98,15 @@
       </script>
 		</header>
     <div class="loading" id="loading">SOFTTRONIC
-			<div class="sea_loader" id="sea_loader">S E A</div>
+			<div class="sea_loader t-center" id="sea_loader">S E A</div>
 		</div>
-		<div class="top">
-			<div class="prior-service">Software Installation</div>
-			<div class="description">Softtronic E A > PC, Mac, Windows > Software Installation</div>
+		<div class="top height-200px">
+			<div class="fn-bold padding">Software Installation</div>
+			<div>Softtronic E A > PC, Mac, Windows > Software Installation</div>
 		</div>
-		<article>
-			<div class="container service-container">
-				<div class="left">
+		<div class="main">
+			<div class="container display-flex">
+				<div class="s-sixth left float">
 					<div class="service-desc">
 						<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software_installation.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671450001354" width="100%" />
 
@@ -207,71 +115,77 @@
 						<p>We specialize in installation and configuring all types of software!</p>
 					</div>
 				</div>
-				<div class="right services">
-					<p>
+				<div class="s-forth right services t-center float">
+					
 						<b>Services</b>
-					</p>
+					
 					<ul>
-						<li>
-							<a href="">Computer sales</a>
+						<li class="li">
+							<a href="" class="a">Computer sales</a>
 						</li>
-						<li>
-							<a href="">Computer repair</a>
+						<li class="li">
+							<a href="" class="a">Computer repair</a>
 						</li>
-						<li>
-							<a href="">Computer maintaince</a>
+						<li class="li">
+							<a href="" class="a">Computer maintaince</a>
 						</li>
-						<li>
-							<a href="">Networking</a>
+						<li class="li">
+							<a href="" class="a">Networking</a>
 						</li>
-						<li>
-							<a href="">Software Installation</a>
+						<li class="li">
+							<a href="" class="a">Software Installation</a>
 						</li>
-						<li>
-							<a href="">CCTV installation</a>
+						<li class="li">
+							<a href="" class="a">CCTV installation</a>
 						</li>
-						<li>
-							<a href="">Wifi problems</a>
+						<li class="li">
+							<a href="" class="a">Wifi problems</a>
 						</li>
-						<li>
-							<a href="">LCD repair | Replacement</a>
+						<li class="li">
+							<a href="" class="a">LCD repair | Replacement</a>
 						</li>
-						<li>
-							<a href="">Battery replacement</a>
+						<li class="li">
+							<a href="" class="a">Battery replacement</a>
 						</li>
-						<li>
-							<a href="">Printers repair</a>
+						<li class="li">
+							<a href="" class="a">Printers repair</a>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div class="container process">
-				<div class="split">
+			<div class="container process display-flex">
+				<div class="split t-center float">
 					<p class="pro-num">1</p>
-					<p class="procedure">We Accept Your gadget</p>
-					<p class="pro-desc">We accept your gadget and book it.</p>
+					<p class="fn-bold">We Accept Your gadget</p>
+					<p>We accept your gadget and book it.</p>
 				</div>
-				<div class="split">
+				<div class="split t-center float">
 					<p class="pro-num">2</p>
-					<p class="procedure">Diagnose and Repair</p>
-					<p class="pro-desc">We diagnose main and any related problems for repair</p>
+					<p class="fn-bold">Diagnose and Repair</p>
+					<p>We diagnose main and any related problems for repair</p>
 				</div>
-				<div class="split">
+				<div class="split t-center float">
 					<p class="pro-num">3</p>
-					<p class="procedure">You Collect Your Gadget</p>
-					<p class="pro-desc">After repair and testing your gadget is ready for collection</p>
+					<p class="fn-bold">You Collect Your Gadget</p>
+					<p>After repair and testing your gadget is ready for collection</p>
 				</div>
 			</div>
-			<section>
+			<section class="t-center fn-bold border-grey">
 				<i>"</i>
-				<div>We Offer Fast, Friendly and Affordable Services.</div>
+				<div class="padding">We Offer Fast, Friendly and Affordable Services.</div>
 				<i>"</i>
 			</section>
-		</article>
-		<div class="bottom">
+		</div>
+		<div class="bottom t-center fn-bold height-200px padding">
 			<p>CALL US TODAY TO GET A FREE QUOTATION</P>
-			<p><a href="tel:+254700536326">Call Us</a></p>
-			
-			</div>
+			<p><a class="a fn-bold" href="tel:+254700536326">Call Us</a></p>
+		</div>
+		<div class="back-top" id="back-top">
+			<button class="top fn-bold" onclick="topFunction()">Top</button>
+		</div>
+		<script> function  topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}</script>
 	</body>
 </html>
