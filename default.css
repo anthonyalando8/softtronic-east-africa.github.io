@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+html {
+	scroll-behavior: smooth;
+  }
 *{
 	box-sizing: border-box;
 }
@@ -337,12 +340,24 @@ button{
 	border: 2px solid rgb(148, 148, 243);
 	border-radius: 5px;
 }
+#card-container{
+	position: relative;
+}
 .card{
 	height: 30vh;
 	position: relative;
-	margin: 1%;			
+	margin: 1%;	
+	overflow: hidden;	
 }
-.card img{
+.card-content{
+	width: 100%;
+	height: 30vh;
+	position: absolute;
+	top: 0%;
+	transition: top 1s;
+}
+
+.card-content img{
 	width: 100%;
 	height: 100%;
 }
@@ -351,14 +366,17 @@ button{
 }
 .card-desc{
 	position: absolute;
-	top: 10%;
+	top: 30%;
 	left: 10%;
-	display: none;
+	/*display: none;*/
 	place-items: center;
-}
-.card a.a{
 	color: white;
+	font-size: 20px;
+	font-weight: bold;
 }
+/*.card a.a{
+	color: white;
+}*/
 .nav
 {
 	color: white;
