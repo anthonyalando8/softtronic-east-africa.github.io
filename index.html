@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+		
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="Favicon.ico">
 		<link rel="stylesheet" href="default.css" />
 		<script src="Default_script.js"></script>
@@ -26,8 +28,8 @@
 				color: brown;
 				font-size: 36px;
 			}
-			.fa-solid{
-				font-size: 70px;
+			.slide-rotate .fa-solid{
+				font-size: 60px;
 			}
 			.right .slide-two{
 				height: 280px;
@@ -53,18 +55,6 @@
 					background: linear-gradient(to left, rgb(219, 219, 245) 0%, rgb(184, 184, 252) 100%);
 				}
 			}
-			.centered{
-				animation: background-change 5s infinite;
-			}
-			@keyframes background-change{
-				from {
-					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-image.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841233129");
-				}
-				to{
-					background-image: url("https://ik.imagekit.io/anthonyalando/Softtronic/background-image-center-one_1_.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841337875");
-				}
-			}
-			
 			.gmap_canvas {
 				overflow:hidden;
 				background:none!important;
@@ -117,28 +107,32 @@
 					text-align: center;
 				}
 			}
-			/*.sticky{
-				position: fixed;
-				top: 0%;
-				width: 100%;
-			}*/
+			
 		</style>
 	</head>
 	<body onload="setInterval(startSlideShow, 5000)">
 		<header>
-			<div class="max-width-650px navbar border-grey container" id="navbar">
+			<div class="max-width-650px navbar border-grey container">
 				<div class="left float s-third">
 					<a class="logo a" href="index.html">S E A</a>
 				</div>
 				<div class="right float s-seventh">
 					<a href="softtronic_services.html" class="a">Services</a>
-					<a href="softtronic_login.html " class="a"><i class="fa fa-fw fa-user"></i> </a>
+					<button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
 				</div>
 			</div>
+			<div class="sidenav" id="mysidenav">
+				<a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="softtronic_services.html">Service</a>
+				<a href="softtronic_about.html">About</a>
+				<a href="#">FAQ</a>
+				<a href="softtronic_contact.html">Contact</a>
+			</div>
 			<div class="desktop">
-				<div class="container important-links">
+				<div class="container important-links position-absolute">
 					<div class="s-half left">
-						<ul class="__follow_links">
+						<ul class="__follow_links position-relative">
 							<li>
 								<a class="a" href=""><i class="fa-brands fa-square-facebook"></i></a>
 							</li>
@@ -150,7 +144,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="s-half right __booking_link">
+					<div class="s-half right __booking_link position-relative">
 						<a class="a" href="tel:+254700536326">Call Now</a>
 					</div>
 
@@ -162,12 +156,12 @@
 								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/softtronic_logo_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841440931">
 							</a>
 						</li>
-						<li class="logo__name fn-bold logo t-center">
+						<li class="logo__name fn-bold logo t-center position-absolute">
 							<a class="a"href="index.html">SOFTTRONIC<br />EAST A</a>
 						</li>
 					</ul>
 				</div>
-				<div class="navbar container">
+				<div class="navbar container" id="navbar">
 					<div class="s-seventh">
 						<ul class="nav-links a">
 							<li>
@@ -193,16 +187,16 @@
 				</div>
 			</div>
 		</header>
-		<div class="loading logo" id="loading">SOFTTRONIC
+		<div class="loading logo position-absolute" id="loading">SOFTTRONIC
 			<div class="sea_loader t-center" id="sea_loader">S E A</div>
 		</div>
 		
-		<div class="p-relative t-center">
-			<div class="position-absolute">
+		<div class="t-center top-ui position-relative">
+			<div class="position-absolute top-image">
 				<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software-construction-picture.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672584105506">
 			</div>
 			
-			<div class="p-absolute t-center">
+			<div class="t-center position-absolute top-ui-center-content">
 				<div class="ui__info">
 					DESIGN YOUR NETWORK
 				</div>
@@ -226,95 +220,97 @@
 				Through enhancing your personal tools, we can help you grow in all areas of your businesses technically.
 			</div>
 			<div class="container mySlides display-flex mgn-top-5pc">
-				<div class="left s-half">
-					<div class="slide-container t-center">
-						<div class="slides" id="slides">
-							<div class="slides-images" id="gallery">
-								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/comp-programming.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841663848" />
+				
+					<div class="left s-half">
+						<div class="slide-container t-center">
+							<div class="slides" id="slides">
+								<div class="slides-images" id="gallery">
+									<img src="https://ik.imagekit.io/anthonyalando/Softtronic/comp-programming.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841663848" />
+								</div>
+								<div class="note t-center">
+									Simplified experiences will meet the changing needs of our customers
+									<br />
+									<button class="button" onclick="noService()">Free Consultation</button>
+								</div>
 							</div>
-							<div class="note t-center">
-								Simplified experiences will meet the changing needs of our customers
+							<div class="slides" id="slides">
+								<div class="slides-images" id="gallery">
+									<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software_installation.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841547693" alt="Software Installation">
+								</div>
+								<div class="note t-center">
+									We specialize in installation and configuring all types of software! Services.
+								</div>
+							</div>
+							<div class="slides" id="slides">
+								<div class="slides-images" id="gallery">
+									<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-camera.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672596253151"alt="cctv installation">
+								</div>
+								<div class="note t-center">
+									We supply and install security cameras for your home or business at affordable prices. Secure your home today without breaking the bank
+								</div>
+							</div>
+							<div class="dots-container t-center">
+								<i class="nav" onclick="plusSlide(-1)"> ❮ </i>
+								<i class="dots active">•</i>
+								<i class="dots">•</i>
+								<i class="dots">•</i>
+								<i class="nav" onclick="plusSlide(1)"> ❯ </i>
+							</div>
+						</div>		
+					</div>
+					<div class="right t-center s-half">
+						When it comes to fulfilling business requirements and challenges, 
+						Softtronic provides the most advanced Information and a Communication Technology (ICT) products,
+						services and solutions.
+						<p class="heading border-grey">Why Choose Us?</p>
+						<p>Our unique business model is based on configuring, integrating and mainting 
+							innovative business solutions designed to meet our clients’ strategic and 
+							operational needs, we call this Connective Intelligence.
+						</p>
+						<p>
+							Our customers have always been our focus, and in the future, we will continue to focus 
+							on providing excellent, effective and innovative solutions that strengthen and improve 
+							our clients’ businesses.
+						</p>
+						<div class="slide-two s-seventh">
+							<div class="slide-rotate">
+								<i class="fa-solid fa-network-wired fa-net"></i><br />
+								<p><b>Networking</b></p>
+								<p>Softtronic Networking Services provide a single vision that ensures your network
+									is ready to rapidly respond to changing business needs across multiple devices, 
+									applications and locations. We help you achieve a simplified, agile, cost-effective 
+									and security-rich networking infrastructure that can support innovation and deliver 
+									business value.
+								</p>
+							</div>
+							<div class="slide-rotate">
+								<i class="fa-solid fa-computer fa-net"></i>
 								<br />
-								<button class="button" onclick="noService()">Free Consultation</button>
+								<p><b>IT Consultancy</b></p>
+								<p>Our information and communications technology (ICT) consultancy ensures 
+									technology not only meets the requirements of its users but that it is implemented 
+									and managed to realise the promised benefits
+								</p>
 							</div>
-						</div>
-						<div class="slides" id="slides">
-							<div class="slides-images" id="gallery">
-								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/software_installation.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841547693" alt="Software Installation">
+							<div class="slide-rotate">
+								<i class="fa-solid fa-lock fa-net"></i>
+								<br />
+								<p><b>Smart Security</b></p>
+								<p>Softtronic has the State-of-the-art access control software that integrates the 
+									most advanced security technologies with innovative networking capabilities to 
+									bring you full-featured security solutions
+								</p>
 							</div>
-							<div class="note t-center">
-								We specialize in installation and configuring all types of software! Services.
-							</div>
-						</div>
-						<div class="slides" id="slides">
-							<div class="slides-images" id="gallery">
-								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-camera.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672596253151"alt="cctv installation">
-							</div>
-							<div class="note t-center">
-								We supply and install security cameras for your home or business at affordable prices. Secure your home today without breaking the bank
-							</div>
-						</div>
-						<div class="dots-container t-center">
-							<i class="nav" onclick="plusSlide(-1)"> ❮ </i>
-							<i class="dots active">•</i>
-							<i class="dots">•</i>
-							<i class="dots">•</i>
-							<i class="nav" onclick="plusSlide(1)"> ❯ </i>
-						</div>
-					</div>		
-				</div>
-				<div class="right t-center s-half">
-					When it comes to fulfilling business requirements and challenges, 
-					Softtronic provides the most advanced Information and a Communication Technology (ICT) products,
-					 services and solutions.
-					 <p class="heading border-grey">Why Choose Us?</p>
-					 <p>Our unique business model is based on configuring, integrating and mainting 
-						innovative business solutions designed to meet our clients’ strategic and 
-						operational needs, we call this Connective Intelligence.
-					</p>
-					<p>
-						Our customers have always been our focus, and in the future, we will continue to focus 
-						on providing excellent, effective and innovative solutions that strengthen and improve 
-						our clients’ businesses.
-					</p>
-					<div class="slide-two s-seventh">
-						<div class="slide-rotate">
-							<i class="fa-solid fa-network-wired fa-net"></i><br />
-							<p><b>Networking</b></p>
-							<p>Softtronic Networking Services provide a single vision that ensures your network
-								is ready to rapidly respond to changing business needs across multiple devices, 
-								applications and locations. We help you achieve a simplified, agile, cost-effective 
-								and security-rich networking infrastructure that can support innovation and deliver 
-								business value.
-							</p>
-						</div>
-						<div class="slide-rotate">
-							<i class="fa-solid fa-computer fa-net"></i>
-							<br />
-							<p><b>IT Consultancy</b></p>
-							<p>Our information and communications technology (ICT) consultancy ensures 
-								technology not only meets the requirements of its users but that it is implemented 
-								and managed to realise the promised benefits
-							</p>
-						</div>
-						<div class="slide-rotate">
-							<i class="fa-solid fa-lock fa-net"></i>
-							<br />
-							<p><b>Smart Security</b></p>
-							<p>Softtronic has the State-of-the-art access control software that integrates the 
-								most advanced security technologies with innovative networking capabilities to 
-								bring you full-featured security solutions
-							</p>
 						</div>
 					</div>
-				</div>
+				
 			</div>
-			<div class="container c-h-fixed mgn-top-5pc" id="c-h-fixed">
+			<div class="container c-h-fixed mgn-top-5pc position-relative" id="c-h-fixed">
 				<div class="s-seventh float">
 					<img src="https://ik.imagekit.io/anthonyalando/Softtronic/corporate-data-management.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672646986421">
 				</div>
-				<div class="s-half p-abs d-h-fixed float" id="p-abs">
-					<div class="padding p-rel" id="p-rel">
+				<div class="s-half p-abs position-absolute d-h-fixed float" id="p-abs">
+					<div class="padding p-rel position-relative" id="p-rel">
 						We have entered the next era of digital transformation. 
 						It is characterized by a growing convergence of product, software, data, and services across all industries.
 					</div>
@@ -328,22 +324,24 @@
 					<div class="s-half">
 						<div class="container">
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="100">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="100">
 									<a class="a" href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/group-diverse-people-having-business-meeting.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672600570061">
-										<p class="card-desc">
+										</div><p class="card-desc" id="200">
 											IT and business.
 										</p>
 									</a></div>
 								</div>
 							</div>
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="101">
-									<a href="#">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="101">
+									<a class="a"href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/aerial-view-business-team.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672602307328">
-										<p class="card-desc">
+									</div><p class="card-desc"id="201">
 											Team Work
 										</p>
 									</a></div>
@@ -354,22 +352,24 @@
 					<div class="s-half">
 						<div class="container">
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="102">
-									<a href="#">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="102">
+									<a class="a"href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/2008.i211.010_video_surveillance_security_cameras_realistic_composition_3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672602693667">
-										<p class="card-desc">
+									</div><p class="card-desc"id="202">
 											Modern Cameras
 										</p>
 									</a></div>
 								</div>
 							</div>
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="103">
-									<a href="#">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="103">
+									<a class="a"href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/wifi-router-table-smart-connection.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672645663244">
-										<p class="card-desc">
+									</div><p class="card-desc"id="203">
 											Brand routers.
 										</p>
 									</a></div>
@@ -382,22 +382,24 @@
 					<div class="s-half">
 						<div class="container">
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="104">
-									<a href="#">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="104">
+									<a class="a"href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/network-switch-with-cables.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672644954713">
-										<p class="card-desc">
+									</div><p class="card-desc"id="204">
 											Quality switch & cables.
 										</p>
 									</a></div>
 								</div>
 							</div>
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="105">
-									<a href="#">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="105">
+									<a class="a"href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/closeup-electronic-circuit-board-with-cpu-microchip-electronic-components-background.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672644302045">
-										<p class="card-desc">
+									</div><p class="card-desc"id="205">
 											PC Maintainance
 										</p>
 									</a></div>
@@ -408,22 +410,24 @@
 					<div class="s-half">
 						<div class="container">
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="106">
-									<a href="#">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="106">
+									<a class="a"href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/laptop-blank-screen-digital-device.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672644582669">
-										<p class="card-desc">
+									</div><p class="card-desc"id="206">
 											Explore latest laptops
 										</p>
 									</a></div>
 								</div>
 							</div>
 							<div class="s-half">
-								<div class="card">
-									<div class="card-content"id="107">
-									<a href="#">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="107">
+									<a class="a"href="#">
+										<div class="card-image">
 										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/3d-electric-car-building.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672643863371">
-										<p class="card-desc">
+									</div><p class="card-desc"id="207">
 											Secure your home.
 										</p>
 									</a></div>
@@ -497,12 +501,9 @@
 						<div class="left s-half">
 							<ul>
 								<b>Contacts</b>
-								<li id="content-copy">254700536326</li>
-								<li id="content-copy">254702511706</li>
-								<li id="content-copy">254796211581</li>
-								<script>
-									document.getElementById("content-copy").addEventListener("click", copyToClipboard);
-								</script>
+								<li>254700536326</li>
+								<li>254702511706</li>
+								<li>254796211581</li>
 							</ul>
 						</div>
 						<div class="right t-center s-half">
@@ -542,7 +543,7 @@
 			Copyright 2022 @Anthony
 		</div>
 		<div class="back-top" id="back-top">
-			<button class="top fn-bold" onclick="topFunction()">Top</button>
+			<button class="top fn-bold position-absolute" onclick="topFunction()">Top</button>
 		</div>
 		
 		
@@ -551,22 +552,22 @@
 			alert('Service unavailable. \nTry again later.');
 			}
 		</script>
-		<!--<script>
-			window.onscroll = function() {myFunction()};
-			
-			var navbar = document.getElementById("navbar");
-			var sticky = navbar.offsetTop;
-			
-			function myFunction() {
-			  if (window.pageYOffset > sticky) {
-				navbar.classList.add("sticky");
-			  } else {
-				navbar.classList.remove("sticky");
-			  }
-			}
-			</script>-->
 		<script>
-			/*document.getElementsByClassName("dots").addEventListener("click", plusSlide(1));*/
+			function onHover(){
+				for(let i = 100;i <= 107;i++){
+					if(document.body.offsetWidth > 650){
+						document.getElementById(i).addEventListener("mouseenter", function(){
+							document.getElementById(i + 100).style.display = "block";
+						});
+						document.getElementById(i).addEventListener("mouseleave", function(){
+							document.getElementById(i + 100).style.display = "none";
+						});
+					}
+				}
+			}
+			onHover();
+			window.addEventListener("resize", onHover);
+			
 			let slideIndex = 1;
 			let index = 1;
 			showSlide(slideIndex);
