@@ -8,7 +8,7 @@ html {
 }
 body{
 	font-family: 'Manjari', sans-serif;
-	background-color: white;
+	background-color: whitesmoke;
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
@@ -222,14 +222,13 @@ button{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  z-index: 10;
 }
 .sidenav a{
   padding: 8px 8px 8px 32px;
@@ -362,7 +361,7 @@ button{
 	width: 100%;
 	height: 30vh;
 	top: 0%;
-	transition: top 1s;
+	transition: top 1s, left 1s,right 1s;
 	z-index: 5;
 }
 .card-image{
