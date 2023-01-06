@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="Favicon.ico">
+        <link rel="stylesheet" href="default.css" />
+        <script src="Default_script.js"></script>
+        <script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
+        <title>Softtronic E A | About</title>
+        <style>
+            .top-ui-center-content{
+                height: 200px;
+                left: calc(30% - 20%);
+                top: calc(70% - 100px);
+                color: rgb(50, 7, 7);
+                padding: 5px;
+                overflow: hidden;
+                box-shadow: 0 20px 35px white;
+            }
+            #about-us{
+                overflow: hidden;
+                height: 70vh;
+            }
+            #about-us .s-fifth{
+                border-left: 1px solid rgb(206, 203, 203);
+            }
+            #about-us ul{
+                padding: 0;
+            }
+            @media (max-width: 650px){
+                #about-us{
+                    height: auto;
+                }
+                #about-us .s-forth, #about-us .s-fifth{
+                    width: 100%;
+                }
+                #about-us .s-fifth{
+                    border-left: none!important;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <header>
+        <div class="t-center border-grey">
+            <p>Opening time: Mon-Sat 08:00-21:00</p>
+            <p>Call now: +254 720 259 844</p>
+        </div>
+        <div class="navbar container" id="navbar">
+            <div class="left s-sixth">
+                <a class="logo a"href="index.html">SOFTTRONIC</a>
+            </div>
+            <div class="right s-forth">
+                <button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="sidenav" id="mysidenav">
+            <a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="softtronic_services.html">Service</a>
+            <a href="softtronic_about.html">About</a>
+            <a href="#">FAQ</a>
+            <a href="softtronic_contact.html">Contact</a>
+        </div>
+	</header>
+
+    <div class="loading logo position-absolute" id="loading">SOFTTRONIC
+        <div class="sea_loader t-center" id="sea_loader">S E A</div>
+    </div>
+
+    <div class="t-center top-ui position-relative">
+        <div class="position-absolute top-image">
+            <img src="https://ik.imagekit.io/anthonyalando/Softtronic/call-us_dVJjWaKPo?ik-sdk-version=javascript-1.4.3&updatedAt=1673029863650">
+        </div>
+        
+        <div class="t-center position-absolute top-ui-center-content">
+            <div class="ui__info">
+                About Us
+            </div>
+            <div class="ui__info_desc padding">
+                Everything about softtronic.
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container display-flex mgn-top-5pc line-h-18" id="about-us">
+            <div class="left s-forth float p">
+                <p class="fn-bold t-center">ABOUT US</p>
+                <p>Established in 1992 as a software house; SOFCOM is engaged in the field of business applications, software development and support.</p>
+                <p>For over 20 years of flawless dedication and experience, our company has excelled in providing innovative and intelligent solutions in the focused business domains of Human Capital Management (HARMONY) and Laboratory Information Management Solution (SPECTRUM). These applications have been designed to cater the need of customers spread over diversified industrial segments and businesses, helping us and our clientage sync and achieve impossible tasks.</p>
+                <p>With our solutions, you can depict your business processes and policies in detail to get intelligent controls and in-depth information on performance. We provide you with unmatched speed and flexibility in our solutions.</p>
+            </div>
+            <div class="s-forth p">
+                <p class="fn-bold t-center">OUR APPROACH</p>
+                <p>Technology has made it possible to do more with less; we cannot predict where it will take us in the future. But we do believe that by handling specific details of business processes we can best shape the future.</p>
+                <p>SOFCOM’s team has always been instrumental to its customer’s growth. This emphasizes our approach towards customer solution efficacy.</p>
+                <p>Since the inception of SOFCOM, we have embarked ourselves on a journey where we have not lost a single customer for lack of performance or application efficiency.
+
+                    SOFCOM has a dedicated team of trained and experienced professionals, focused entirely on minute details of your business processes, and passionate about understanding customer needs.</p>
+            </div>
+            <div class="s-fifth p">
+                <ul>
+                    <li>Who we are</li>
+                    <li>Request for demo</li>
+                    <li>customer support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="back-top" id="back-top">
+        <button class="top fn-bold position-absolute" onclick="topFunction()">Top</button>
+    </div>
+    <script> 
+        function  topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
