@@ -5,13 +5,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 		<link rel="stylesheet" href="default.css" />
-    <script src="Default_script.js"></script>
+    	<script src="Default_script.js"></script>
 		<script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
 		<title>Softtronic E A | Services</title>
 		<style>
-      .navbar button{
-        background-color: transparent;
-      }
       .height-200px{
         height: 200px;
         color: white;
@@ -64,16 +61,15 @@
           width: 100%;
         }
       }
-  
 		</style>
 	</head>
 	<body>
 		<header>
 			<div class="t-center border-grey">
 				<p>Opening time: Mon-Sat 08:00-21:00</p>
-				<p>Call now: <i id="content-copy">+254 720 259 844</i></p>
+				<p>Call now: +254 720 259 844</p>
 			</div>
-			<div class="navbar container">
+			<div class="navbar container" id="navbar">
 				<div class="left s-sixth">
 					<a class="logo a"href="index.html">SOFTTRONIC</a>
 				</div>
@@ -81,23 +77,16 @@
 					<button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
 				</div>
 			</div>
-      <div class="sidenav" id="mysidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="softtronic_services.html">Services</a>
-        <a href="softtronic_about.html">About Us</a>
-        <a href="softtronic_sign_up.html">Sign Up</a>
-      </div>
-      <script>
-        function openNav(){
-          document.getElementById("mysidenav").style.width = "250px";
-        }
-        function closeNav(){
-          document.getElementById("mysidenav").style.width = "0px";
-        }
-      </script>
+			<div class="sidenav" id="mysidenav">
+				<a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="softtronic_services.html">Service</a>
+				<a href="softtronic_about.html">About</a>
+				<a href="#">FAQ</a>
+				<a href="softtronic_contact.html">Contact</a>
+			</div>
 		</header>
-    <div class="loading" id="loading">SOFTTRONIC
+    <div class="loading logo position-absolute" id="loading">SOFTTRONIC
 			<div class="sea_loader t-center" id="sea_loader">S E A</div>
 		</div>
 		<div class="top height-200px">
@@ -181,9 +170,10 @@
 			<p><a class="a fn-bold" href="tel:+254700536326">Call Us</a></p>
 		</div>
 		<div class="back-top" id="back-top">
-			<button class="top fn-bold" onclick="topFunction()">Top</button>
+			<button class="top fn-bold position-absolute" onclick="topFunction()">Top</button>
 		</div>
-		<script> function  topFunction() {
+		<script> 
+			function  topFunction() {
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
 		}</script>
