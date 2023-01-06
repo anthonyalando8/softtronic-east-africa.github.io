@@ -502,4 +502,8 @@ ul{
 	{
 		height: 40vh;
 	}
+	.card img:hover{
+		filter: brightness(100%);
+		scale: 1.0;
+	}
 }
