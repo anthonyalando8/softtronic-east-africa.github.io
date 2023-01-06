@@ -321,7 +321,7 @@ button{
 	z-index: 2;
 	width: 100%;
 	overflow: hidden;
-	height: 85vh;
+	height: 650px;
 }
 .top-ui-center-content{
 	width: 40%;
@@ -333,7 +333,7 @@ button{
 	width: 100%;
 }
 .top-ui img{
-	height: 85vh;
+	height: 100%;
 	width: 100%;
 	animation-name: imageScale;
 	animation-duration: 4s;
