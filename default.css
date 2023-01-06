@@ -8,7 +8,7 @@ html {
 }
 body{
 	font-family: 'Manjari', sans-serif;
-	background-color: whitesmoke;
+	background-color: rgb(255, 255, 255);
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
@@ -35,7 +35,7 @@ body{
 	width: 100%;
 }
 .mgn-top-5pc{
-	margin-top: 5%;
+	margin-top: 4%;
 }
 .container::after{
 	content: "";
@@ -45,6 +45,9 @@ body{
 .s-half
 {
 	width: 50%;
+}
+.s-fifth{
+	width: 20%;
 }
 .s-third
 {
@@ -67,6 +70,12 @@ body{
 .fn-bold{
 	font-weight: bold;
 	font-size: 20px;
+}
+.line-h-18{
+	line-height: 1.8;
+}
+.p{
+	padding: 10px;
 }
 .padding{
 	padding-top: 30px;
@@ -312,14 +321,10 @@ button{
 	z-index: 2;
 	width: 100%;
 	overflow: hidden;
-	height: 90vh;
+	height: 85vh;
 }
 .top-ui-center-content{
 	width: 40%;
-	height: 300px;
-	left: calc(50% - 20%);
-	top: calc(50% - 150px);
-	color: rgb(212, 205, 205);
 	padding: 5px;
 	overflow: hidden;
 	box-shadow: 0 20px 35px rgb(148, 148, 243);
@@ -328,13 +333,12 @@ button{
 	width: 100%;
 }
 .top-ui img{
-	height: 90vh;
+	height: 85vh;
 	width: 100%;
 	animation-name: imageScale;
 	animation-duration: 4s;
 	animation-iteration-count: 1;
 	animation-delay: 1s;
-	filter: brightness(25%);
 }
 @keyframes imageScale{
 	from{transform: scale(1.5);}
@@ -344,13 +348,6 @@ button{
 	font-size: 48px;
 	font-weight: bold;
 	letter-spacing: 5px;
-}
-
-.ui__info_desc a{
-	padding: 10px;
-	color: rgb(148, 148, 243);
-	border: 2px solid rgb(148, 148, 243);
-	border-radius: 5px;
 }
 .card{
 	height: 30vh;
@@ -488,9 +485,12 @@ ul{
 		height: 280px;
 		top: calc(50% - 140px);
 	}
+	.top-ui img, .top-ui{
+		height: 80vh!important;
+	}
 	.top-ui-center-content{
-		width: 90%;
-		left: 5%;
+		width: 90%!important;
+		left: 5%!important;
 	}
 	.card-container .s-half{
 		width: 100%;
