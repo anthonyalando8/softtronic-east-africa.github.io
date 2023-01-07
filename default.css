@@ -518,7 +518,7 @@ input[type=text], input[type=password] {
 	background-color: #fefefe;
 	border: 1px solid #888;
 	width: 100%; 
-	height: 800px!important;
+	height: 600px!important;
   }
   hr {
 	border: 1px solid #f1f1f1;
@@ -578,8 +578,12 @@ input[type=text], input[type=password] {
 	}
 	.back-top{left: 80%;}
 	.modal{
+		height: 80%;
 		width: 90%;
 		left: 5%;
+	}
+	.modal-content{
+		height: auto!important;
 	}
 	.cancelbtn, .signupbtn {
 		width: 100%;
