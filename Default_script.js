@@ -117,7 +117,7 @@ window.onscroll = function()
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     var modal = document.getElementById('id01');
-  if (event.target !== modal) {
+  if (event.target == modal) {
     closeModal();
   }
 }
@@ -131,5 +131,5 @@ window.addEventListener("load", function(){
     setTimeout(function(){
         document.getElementById("id01").style.display = "block";
         document.getElementById("body").classList.add("stop-scrolling");
-    }, 30000);
+    }, 1000);
 });
