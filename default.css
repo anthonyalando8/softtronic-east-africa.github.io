@@ -577,6 +577,10 @@ input[type=text], input[type=password] {
 		height: auto;
 	}
 	.back-top{left: 80%;}
+	.modal{
+		width: 90%;
+		left: 5%;
+	}
 	.cancelbtn, .signupbtn {
 		width: 100%;
 	 }
