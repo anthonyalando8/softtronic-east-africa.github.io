@@ -506,7 +506,7 @@ input[type=text], input[type=password] {
 	left: 10%;
 	top: 5%;
 	width: 80%;
-	height: 80%;
+	height: 600px;
 	overflow: auto;
 	background-color: #474e5d;
 	border: none;
@@ -518,7 +518,7 @@ input[type=text], input[type=password] {
 	background-color: #fefefe;
 	border: 1px solid #888;
 	width: 100%; 
-	height: auto!important;
+	height: 800px!important;
   }
   hr {
 	border: 1px solid #f1f1f1;
