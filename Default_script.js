@@ -10,24 +10,27 @@ document.onreadystatechange = function(){
 };
 
 function openNav(){
-document.getElementById("mysidenav").style.width = "250px";
+    document.getElementById("mysidenav").style.width = "250px";
 }
 function closeNav(){
-document.getElementById("mysidenav").style.width = "0px";
+    document.getElementById("mysidenav").style.width = "0px";
 }
 /*function copyToClipboard(){
-var copyText = document.getElementById("content-copy");
+    for(let j = 300; j <= 305; j++){
+        var copyClip = document.getElementById(j);
+        copyClip.style.cursor = "pointer";
+        copyClip.addEventListener('click', (e) =>{
+            var elementId = e.target.id;
+            var copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            alert("Copied: " + copyText.value);
+        });
+    }
+}
+copyToClipboard();*/
 
-// Select the text field
-copyText.select();
-copyText.setSelectionRange(0, 99999); // For mobile devices
-
-// Copy the text inside the text field
-navigator.clipboard.writeText(copyText.value);
-
-// Alert the copied text
-alert("Copied: " + copyText.value);
-}*/
 window.onscroll = function()
 {
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
@@ -111,3 +114,22 @@ window.onscroll = function()
     }
 };
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    var modal = document.getElementById('id01');
+  if (event.target !== modal) {
+    closeModal();
+  }
+}
+
+function closeModal(){
+    document.getElementById('id01').style.display="none";
+    document.getElementById("body").classList.remove("stop-scrolling");
+}
+
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        document.getElementById("id01").style.display = "block";
+        document.getElementById("body").classList.add("stop-scrolling");
+    }, 30000);
+});
