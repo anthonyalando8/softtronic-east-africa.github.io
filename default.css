@@ -504,7 +504,7 @@ input[type=text], input[type=password] {
 	position: fixed;
 	z-index: 16;
 	left: 10%;
-	top: 5%;
+	top: calc(50% - 300px);
 	width: 80%;
 	height: 600px;
 	overflow: auto;
@@ -578,6 +578,7 @@ input[type=text], input[type=password] {
 	}
 	.back-top{left: 80%;}
 	.modal{
+		top: 10%;
 		height: 80%;
 		width: 90%;
 		left: 5%;
