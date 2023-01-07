@@ -131,5 +131,5 @@ window.addEventListener("load", function(){
     setTimeout(function(){
         document.getElementById("id01").style.display = "block";
         document.getElementById("body").classList.add("stop-scrolling");
-    }, 1000);
+    }, 30000);
 });
