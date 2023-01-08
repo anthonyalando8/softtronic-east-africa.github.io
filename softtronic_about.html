@@ -29,6 +29,98 @@
             #about-us ul{
                 padding: 0;
             }
+            .sea__team .container{
+                height: 320px;
+            }
+            .sea__team{
+                overflow: hidden;
+            }
+            .head{
+                width: 100%;
+                position: relative;
+                margin: 100px auto;
+            }
+            .head:before{
+                content:" ";
+                display: block;
+                height: 2px;
+                width: 40%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                background: rgb(143, 141, 141);
+              }
+              .head:after{
+                content:" ";
+                height: 2px;
+                width: 40%;
+                background: rgb(143, 141, 141);
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+              }
+
+            .sea__team .container .s-third{
+                height: 300px;
+                border: 1px solid whitesmoke;
+                margin: auto 5% auto 5%;
+                background-color: whitesmoke;
+                border-radius: 50%;
+                text-align: center;
+                transition: top 1s;
+                box-shadow: 0 5px 5px rgb(211, 205, 205);
+            }
+            .sea__team .image-container{
+                width: 100%;
+                margin: auto;
+                top: 0;
+                height: 100%;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 10px solid white;
+                border-right-width: 1px;
+                transition: transform 1s;
+            }
+            .sea__team .container .s-third:hover > .image-container{
+                transform: rotateY(-90deg);
+                transform-origin: right 50%;
+            }
+            .sea__team img{
+                border-radius: 50%;
+                margin-top: 5%;
+                margin-right: 0%;
+                width: 100%;
+                height: 70%;
+            }
+            .achievements{
+                height: auto;
+                overflow: hidden;
+            }
+            .achievements .container{
+                text-align: justify;
+            }
+            .bold{
+                font-weight: bold;
+            }
+            .achievements .s-fifth{
+                margin: auto;
+            }
+            .achievements .achieve_t{
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                border: 12px solid brown;
+                border-radius: 50%;
+                color: brown;
+                font-size: 36px;
+                font-weight: bold;
+            }
+            .achieve_t .fa-solid{
+                margin-top: calc(50% - 18px);
+            }
+            #a3, #a2{border-left-color:whitesmoke ;}
+            #a4{border-left-color:whitesmoke ;border-bottom-color:whitesmoke ;}
             @media (max-width: 650px){
                 #about-us{
                     height: auto;
@@ -39,6 +131,45 @@
                 #about-us .s-fifth{
                     border-left: none!important;
                     border-top:  1px solid rgb(206, 203, 203);;
+                }
+                .head::before{
+                    width: 10%;
+                }
+                .head::after{
+                    width: 10%;
+                }
+                .sea__team .container{
+                    height: auto;
+                }
+                .sea__team .container .s-third{
+                    width: 95%;
+                    margin: 1% auto 1% auto;
+                    border-radius: 50% 50% 50% 50% / 50px;
+                    padding-top: 10px;
+                }
+                .sea__team .image-container{
+                    width: 100%;
+                    margin: auto;
+                    top: 30%;
+                    height: 65%;
+                    border-radius: 5px;
+                    border: none;
+                }
+                .sea__team img{
+                    margin-top: 2%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50% 50% 50% 50% / 50px;
+                }
+                .sea__team .container .s-third p{
+                    margin: 0;
+                }
+                .sea__team .container .s-third:hover > .image-container{
+                    transform: none;
+                }
+                .achievements .s-fifth{
+                    width: 95%;
+                    margin: auto;
                 }
             }
         </style>
@@ -86,6 +217,7 @@
         </div>
     </div>
     <div class="main">
+
         <div class="container display-flex mgn-top-5pc line-h-18" id="about-us">
             <div class="left s-forth float p">
                 <p class="fn-bold t-center">ABOUT US</p>
@@ -109,6 +241,67 @@
                 </ul>
             </div>
         </div>
+
+        <div class="sea__team" id="sea__team">
+            <div class="fn-bold t-center head">OUR DEDICATED TEAM</div>
+            <div class="container display-flex">
+                <div class="s-third float left line-h-18 position-relative padding" id="400">
+                    <p class="fn-bold name">Omukuyia Anthony.</p>
+                    <p>Technician.<br/>+2547 ** *** ***</p>
+                    <div class="image-container position-absolute">
+                        <img src="https://ik.imagekit.io/anthonyalando/Images/avatar.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669121599974">
+                    </div>
+                </div>
+                <div class="s-third float left line-h-18 position-relative padding" id="401">
+                    <p class="fn-bold name">Paul Omukuyia.</p>
+                    <p>Engineer & Founder.<br/>+2547 ** *** ***</p>
+                    <div class="image-container position-absolute">
+                        <img src="https://ik.imagekit.io/anthonyalando/Images/avatar2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669121603923">
+                    </div>
+                </div>
+                <div class="s-third float left line-h-18 position-relative padding" id="402">
+                    <p class="fn-bold name">Omukuyia Frank.</p>
+                    <p>Software Engineer. <br/>+2547 ** *** ***</p>
+                    <div class="image-container position-absolute">
+                        <img src="https://ik.imagekit.io/anthonyalando/Images/user.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669121593852">
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="achievements">
+            <div class="fn-bold t-center head">ACHIEVEMENTS</div>
+            <div class="container display-flex ">
+                <div class="s-fifth float t-center">
+                    <div class="achieve_t" id="a1">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <p class="bold">CLIENT RETENTION</p>
+                    <p>We have not lost a single customer.</p>
+                </div>
+                <div class="s-fifth float t-center">
+                    <div class="achieve_t" id="a2">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <p class="bold">SUCCESSFUL SOLUTION DELIVERY</p>
+                    <p>Our solutions have almost zero percent failure rate.</p>
+                </div>
+                <div class="s-fifth float t-center">
+                    <div class="achieve_t" id="a3">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <p class="bold">POPULAR AWARDS</p>
+                    <p>Our solutions have won a number of prestigious awards.</p>
+                </div>
+                <div class="s-fifth float t-center">
+                    <div class="achieve_t"id="a4">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p class="bold">EMPLOYEE RETENTION</p>
+                    <p>Employee retention is among one of the many assets our company enjoys.</p>
+                </div>
+            </div>
+        </div>
+        
     </div>
     <div class="back-top" id="back-top">
         <button class="top fn-bold position-absolute" onclick="topFunction()">Top</button>
@@ -118,6 +311,20 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
         }
+    </script>
+    <script>
+        document.addEventListener("scroll", function(){
+            var container = document.getElementById("sea__team");
+            for(let i = 400; i <= 402; i++){
+            var el_id = document.getElementById(i);
+                if(isInViewPort(container)){
+                    el_id.style.top = "0%";
+                }
+                /*else{
+                    el_id.style.top = "100%";
+                }*/
+            }
+        });
     </script>
 </body>
 </html>
