@@ -8,6 +8,15 @@ document.onreadystatechange = function(){
         document.querySelector("body").style.visibility = "visible";
     }
 };
+function isInViewPort(el){
+    const rect = el.getBoundingClientRect();
+    return(
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)&&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
 function openNav(){
     document.getElementById("mysidenav").style.width = "250px";
