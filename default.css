@@ -35,7 +35,7 @@ body{
     border-right: 2px solid rgba(206, 200, 200, 0.75);
 	white-space: nowrap;
     overflow: hidden;
-	animation: typewriter 5s steps(44) 1s infinite normal both,
+	animation: typewriter 5s steps(44) infinite normal both,
              blinkTextCursor 500ms steps(44) infinite normal; 
 }
 @keyframes typewriter{
