@@ -2,10 +2,12 @@ document.onreadystatechange = function(){
     if(document.readyState !== "complete"){
         document.querySelector("body").style.visibility = "hidden";
         document.querySelector("#loading").style.visibility = "visible";
+        document.getElementById("body").classList.add("stop-scrolling");
     }
     else{
         document.querySelector("#loading").style.display = "none";
         document.querySelector("body").style.visibility = "visible";
+        document.getElementById("body").classList.remove("stop-scrolling");
     }
 };
 function isInViewPort(el){
