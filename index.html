@@ -24,12 +24,8 @@
 				border: none;
 				border-radius: 10px;
 			}
-			.heading{
-				color: brown;
-				font-size: 36px;
-			}
 			.top-ui-center-content{
-				height: 300px;
+				min-height: 300px;
 				left: calc(50% - 20%);
 				top: calc(50% - 150px);
 				color: rgb(212, 205, 205);
@@ -46,22 +42,35 @@
 			.top-ui img{
 				filter: brightness(25%);
 			}
+			.service_link{
+				box-shadow: 0 5px 5px rgb(212, 210, 210);
+				padding: 20px;
+				font-size: 20px;
+			}
+			.service_link .s-forth a{
+				background-color: rgb(253, 178, 39);
+				padding: 5px;
+				border-radius: 5px;
+				width: 50%;
+			}
 			.slide-rotate .fa-solid{
 				font-size: 60px;
 			}
 			.right .slide-two{
-				height: 280px;
+				height: 100%;
 				margin: auto;
-				background-color: rgb(184, 184, 252);
-				padding: 10px;
-				border-bottom:1px solid rgb(56, 55, 55);
-				border-top: 1px solid rgb(56, 55, 55);
-				border-radius: 50% 50% 50% 50% / 50px;
 				overflow: hidden;
-				animation: bg 10s infinite;
+				border-radius: 5px;
+				background-color: rgb(243, 240, 240);
 			}
 			.slide-rotate
 			{
+				margin: 5px;
+				min-height: 300px;
+				padding: 10px;
+				background-color: rgb(184, 184, 252);
+				border-radius: 15px;
+				animation: bg 10s infinite;
 				display: none;
 				overflow: hidden;
 			}
@@ -101,6 +110,71 @@
 				font-size: 16px;
 				color: green;
 			}
+			.why_sea .s-half{
+				height: 300px;
+				overflow: hidden;
+			}
+			.why_sea .why-image{
+				width: 100%;
+				height: 150px;
+				overflow: hidden;
+			}
+			.why-image img{
+				height: 100%;
+				width: 100%;
+			}
+			.why_sea .s-half > .s-sixth{
+				border:1px solid rgb(196, 196, 247);
+				box-shadow: 0 5px 5px rgb(226, 226, 244);
+				border-radius: 5px;
+				height: 90%;
+				margin: auto;
+			}
+			.why_sea .s-half > .s-sixth:hover{
+				transition: translate 0.5s;
+				translate: 0px -5px;
+				box-shadow: 0 20px 20px rgb(226, 226, 244);
+			}
+			.e-bold{
+				font-size: 48px;
+				font-weight: bolder;
+				color: rgb(11,11,69);
+			}
+			.bottom{
+				background-color: rgb(84, 120, 249);
+				background-image: linear-gradient(to right, rgb(32, 68, 197) , rgb(148, 162, 213));
+				color: white;
+				height: 700px;
+				margin-bottom: 0!important;
+			}
+			.bottom .e-bold{
+			
+				margin: 0;
+				text-align: center;
+			}
+			.bottom .container{
+				height: 100%;
+			}
+			.bottom .s-half{
+				height: 80%;
+			}
+			.bottom .s-half .content{
+				width: 80%;
+				margin: auto;
+				height: 100%;
+			}
+			.bottom .s-half .content p{
+				padding: 10px;
+			}
+			.bottom .bottom-images{
+				width: 60%;
+				margin: auto;
+				height: 40%;
+			}
+			.bottom .bottom-images .fa-solid{
+				font-size: 150px;
+				color: rgb(4, 35, 69);
+			}
 			@media (max-width: 650px){
 				.consult{
 					width: 100%;
@@ -109,10 +183,20 @@
 					float: left;
 					width: 100%;
 				}
-				
+				.mySlides .right{
+					margin-top: 10%;
+				}
 				.right .slide-two{
-					width: 90%;
-					height: 350px;
+					width: 100%;
+				}
+				.right .slide-rotate{
+					min-height: 350px;
+				}
+				.service_link .s-sixth, .service_link .s-forth{
+					width: 100%;
+				}
+				.service_link .s-forth{
+					margin-top:10px ;
 				}
 				.location {
 				display: inline-block;
@@ -124,6 +208,43 @@
 					margin-top: 10px;
 					text-align: center;
 				}
+				.why_sea .s-half{
+					height: 300px;
+					width: 95%;
+					margin: auto;
+				}
+				.why_sea .s-half > .s-sixth{
+					width: 95%;
+					height: 90%;
+					margin: auto;
+				}
+				.e-bold{
+					font-size: 28px;
+				}
+
+				.bottom{
+					height: auto;
+				}
+				.bottom .container{
+					height: auto;
+				}
+				.bottom .s-half{
+					width: 100%;
+					margin: auto;
+					height: auto;
+				}
+				.bottom .s-half .content{
+					height: 100%;
+					width: 95%;
+				}
+				.bottom .bottom-images{
+					height: auto;
+				}
+				.bottom .bottom-images .fa-solid{
+					font-size: 100px;
+					color: rgb(4, 35, 69);
+				}
+				.bottom .e-bold{text-align: left;}
 			}
 			
 		</style>
@@ -224,6 +345,10 @@
 				</div>
 			</div>
 		</div>
+		<div class="container t-center display-flex service_link">
+			<div class="s-sixth left float">See what softtronic can do for you.</div>
+			<div class="s-forth right float"><a  class="a"href="softtronic_services.html">View Now</a></div>
+		</div>
 		<div class="main">
 			<div class="centered t-center  mgn-top-5pc">
 				<div class="max-width-650px">
@@ -277,32 +402,18 @@
 						</div>		
 					</div>
 					<div class="right t-center s-half">
-						When it comes to fulfilling business requirements and challenges, 
-						Softtronic provides the most advanced Information and a Communication Technology (ICT) products,
-						services and solutions.
-						<p class="heading border-grey">Why Choose Us?</p>
-						<p>Our unique business model is based on configuring, integrating and mainting 
-							innovative business solutions designed to meet our clients’ strategic and 
-							operational needs, we call this Connective Intelligence.
-						</p>
-						<p>
-							Our customers have always been our focus, and in the future, we will continue to focus 
-							on providing excellent, effective and innovative solutions that strengthen and improve 
-							our clients’ businesses.
-						</p>
 						<div class="slide-two s-seventh">
 							<div class="slide-rotate">
-								<i class="fa-solid fa-network-wired fa-net"></i><br />
+								<i class="fa-solid fa-network-wired"></i><br />
 								<p><b>Networking</b></p>
-								<p>Softtronic Networking Services provide a single vision that ensures your network
+								<p>Softtronic provide a single vision that ensures your network
 									is ready to rapidly respond to changing business needs across multiple devices, 
-									applications and locations. We help you achieve a simplified, agile, cost-effective 
-									and security-rich networking infrastructure that can support innovation and deliver 
-									business value.
+									applications and locations. We help you achieve a simplified, agile and cost-effective 
+									and network.
 								</p>
 							</div>
 							<div class="slide-rotate">
-								<i class="fa-solid fa-computer fa-net"></i>
+								<i class="fa-solid fa-computer"></i>
 								<br />
 								<p><b>IT Consultancy</b></p>
 								<p>Our information and communications technology (ICT) consultancy ensures 
@@ -311,7 +422,7 @@
 								</p>
 							</div>
 							<div class="slide-rotate">
-								<i class="fa-solid fa-lock fa-net"></i>
+								<i class="fa-solid fa-lock"></i>
 								<br />
 								<p><b>Smart Security</b></p>
 								<p>Softtronic has the State-of-the-art access control software that integrates the 
@@ -323,14 +434,37 @@
 					</div>
 				
 			</div>
+				<div  class="why_sea mgn-top-5pc t-center padding">
+					<p class="e-bold">The foundation of high-performing Networks.</p>
+				<div class="container display-flex mgn-top-5pc padding">
+					<div class="s-half t-center">
+						<div class="s-sixth">
+							<a class="a"href="">
+								<div class="why-image"><img src="https://ik.imagekit.io/anthonyalando/Softtronic/top-view-manager-woman-analyzing-financial-paperwork-strategy-typing-expertise-laptop.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673427175088"alt="Softtronic project"></div>
+								<p class="fn-bold">Softtronic Projects.</p>
+								<p>Explore on our major projects in recent years.</p>
+							</a>
+						</div>
+					</div>
+					<div class="s-half t-center">
+						<div class="s-sixth">
+							<a class="a"href="">
+								<div class="why-image"><img src="https://ik.imagekit.io/anthonyalando/Softtronic/tarn-nguyen-y-LHAtkQJgc-unsplash.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673115088304"alt="Softtronic achieves"></div>
+								<p class="fn-bold">Achievements.</p>
+								<p>See why this organisation is trusted with over 500000+ customer.</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="container c-h-fixed mgn-top-5pc position-relative" id="c-h-fixed">
 				<div class="s-seventh float">
 					<img src="https://ik.imagekit.io/anthonyalando/Softtronic/abs-image-1_WpycKFVgE?ik-sdk-version=javascript-1.4.3&updatedAt=1673014253273">
 				</div>
-				<div class="s-half p-abs position-absolute d-h-fixed float" id="p-abs">
+				<div class="s-half p-abs position-absolute float" id="p-abs">
 					<div class="padding p-rel position-relative" id="p-rel">
 						We have entered the next era of digital transformation. 
-						It is characterized by a growing convergence of product, software, data, and services across all industries.
+						It is characterized by a growing convergence of product across all industries.
 					</div>
 				</div>
 			</div>
@@ -493,6 +627,57 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="mgn-top-5pc bottom">
+			<p class="e-bold p">Why Choose Us?</p>
+			<div class="container display-flex">
+				<div class="s-half float">
+					<div class="container display-flex">
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images">
+								<i class="fa-solid fa-brain"></i>
+							</div>
+							<p class="fn-bold">Collaborative and service-minded</p>
+							<p>Customer experience delivered by cross-functional pods that pair service agents with colleagues throughout the organization for case swarming.</p>
+						</div>
+						</div>
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images">
+								<i class="fa-solid fa-group-arrows-rotate"></i>
+							</div>
+							<p class="fn-bold">Responsible and people driven</p>
+							<p>Team is highly motivated and always looking for new challenges. They are ambitious and competitive, always striving to be the best.</p>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="s-half float">
+					<div class="container display-flex">
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images">
+								<i class="fa-solid fa-shield"></i>
+							</div>
+							<p class="fn-bold">Reliable performance and safety</p>
+							<p>We are performance-motivated. Everyone wants to be successful at work. When we achieve goals, our brain rewards us with dopamine and we feel good about ourselves.</p>
+						</div>
+						</div>
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images">
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<p class="fn-bold">Fully configurable and future-proof</p>
+							<p>We anticipate the future and developing methods of minimizing the effects of shocks and stresses of future events.</p>
+						</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
 		</div>
 		<div class="max-width-650px">
 			<div class="container footer mgn-top-5pc">
