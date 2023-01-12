@@ -16,6 +16,15 @@
 				background-color: rgb(72,72,72);
 				font-weight: bold;
 			}
+			.desktop .navbar .s-third button{
+				background-color: rgb(253, 178, 39);
+				padding: 10px;
+				border-radius: 5px;
+				width: 40%;
+				margin: auto;
+				color: white;
+				font-weight: bold;
+			}
 			.slides button{
 				padding: 5px;
 				color: white;
@@ -82,6 +91,14 @@
 					background: linear-gradient(to left, rgb(219, 219, 245) 0%, rgb(184, 184, 252) 100%);
 				}
 			}
+			.slide-two-bottom-content{
+				min-height: calc(100% - 300px);
+				background-image: url('https://ik.imagekit.io/anthonyalando/Softtronic/back-card_Gk4Pv8lGl?ik-sdk-version=javascript-1.4.3&updatedAt=1673553564856');
+				background-size: cover;
+				background-repeat: no-repeat;
+				color: white;
+				padding-top: 100px;
+			}
 			.gmap_canvas {
 				overflow:hidden;
 				background:none!important;
@@ -146,9 +163,10 @@
 				color: white;
 				height: 700px;
 				margin-bottom: 0!important;
+				overflow: hidden;
 			}
 			.bottom .e-bold{
-			
+				
 				margin: 0;
 				text-align: center;
 			}
@@ -175,7 +193,7 @@
 				font-size: 150px;
 				color: rgb(4, 35, 69);
 			}
-			@media (max-width: 650px){
+			@media screen and (max-width: 650px){
 				.consult{
 					width: 100%;
 				}
@@ -191,6 +209,9 @@
 				}
 				.right .slide-rotate{
 					min-height: 350px;
+				}
+				.slide-two-bottom-content{
+					padding-top: 50px;
 				}
 				.service_link .s-sixth, .service_link .s-forth{
 					width: 100%;
@@ -262,7 +283,7 @@
 			</div>
 			<div class="sidenav" id="mysidenav">
 				<a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
-				<a href="index.html">Home</a>
+				<a class="active"href="index.html">Home</a>
 				<a href="softtronic_services.html">Service</a>
 				<a href="softtronic_about.html">About</a>
 				<a href="#">FAQ</a>
@@ -273,38 +294,33 @@
 					<div class="s-half left">
 						<ul class="__follow_links position-relative">
 							<li>
-								<a class="a" target="_blank"href="https://www.facebook.com/anthony.omukuyia.9/"><i class="fa-brands fa-square-facebook"></i></a>
+								<a class="a" title="facebook" target="_blank"href="https://www.facebook.com/anthony.omukuyia.9/"><i class="fa-brands fa-square-facebook"></i></a>
 							</li>
 							<li>
-								<a class="a" href=""><i class="fa-brands fa-linkedin"></i></a>
+								<a class="a" title="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a>
 							</li>
 							<li>
-								<a class="a" href=""><i class="fa-brands fa-square-twitter"></i></a>
+								<a class="a" title="twitter" href=""><i class="fa-brands fa-square-twitter"></i></a>
 							</li>
 						</ul>
 					</div>
 					<div class="s-half right __booking_link position-relative">
-						<a class="a" href="tel:+254700536326">Call Now</a>
+						<a class="a" title="Click to call" href="tel:+254700536326">Call Now</a>
 					</div>
 
 				</div>
-				<div class="sea__logo__ t-center">
-					<ul class="logo__">
-						<li class="logo__image">
-							<a class="a"href="index.html">
-								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/softtronic_logo_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672841440931">
+				<div class="sea__logo__">
+					<div class="logo-image">
+							<a class="a" title="logo" href="index.html">
+								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/LOGO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673549300976">
 							</a>
-						</li>
-						<li class="logo__name fn-bold logo t-center position-absolute">
-							<a class="a"href="index.html">SOFTTRONIC<br />EAST A</a>
-						</li>
-					</ul>
+					</div>
 				</div>
 				<div class="navbar container" id="navbar">
 					<div class="s-seventh">
 						<ul class="nav-links a">
 							<li>
-								<a class="a" href="index.html">Home</a>
+								<a class="a active" href="index.html">Home</a>
 							</li>
 							<li>
 								<a class="a" href="softtronic_services.html">Services</a>
@@ -320,8 +336,8 @@
 							</li>
 						</ul>
 					</div>
-					<div class="s-third">
-
+					<div class="s-third t-center">
+						<button class="button">Blog</button>
 					</div>
 				</div>
 			</div>
@@ -331,7 +347,7 @@
 		</div>
 		
 		<div class="t-center top-ui position-relative">
-			<div class="position-absolute top-image">
+			<div class="position-absolute top-image-container">
 				<img src="https://ik.imagekit.io/anthonyalando/Softtronic/programmer_InvdPlg2d?ik-sdk-version=javascript-1.4.3&updatedAt=1673012765343">
 			</div>
 			
@@ -429,12 +445,16 @@
 									bring you full-featured security solutions.
 								</p>
 							</div>
+							<div class="slide-two-bottom-content t-center padding">
+								<p class="p">With people being accommodated and tangled with devices and technologies, confidence and trust have been built towards digital technologies.</p>
+					
+							</div>
 						</div>
 					</div>
 				
 			</div>
 				<div  class="why_sea mgn-top-5pc t-center padding">
-					<p class="e-bold">The foundation of high-performing Networks.</p>
+					<p class="e-bold  auto-type">The foundation of high-performing Networks.</p>
 				<div class="container display-flex mgn-top-5pc padding">
 					<div class="s-half t-center">
 						<div class="s-sixth">
