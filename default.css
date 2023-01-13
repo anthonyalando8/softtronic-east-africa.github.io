@@ -583,14 +583,13 @@ input[type=text], input[type=password] {
 	width: 90%;
 	margin: auto;
 }
-@media screen and(max-width: 650px){
+@media (max-width: 650px){
 	.max-width-650px{display: block!important;}
 	.sidenav {padding-top: 15px;}
   	.sidenav a {font-size: 18px;}
 	.desktop{display: none;}
 	.display-flex{display: inline-block!important;}
-	.auto-type{white-space: break-spaces;
-	animation: none;}
+	.auto-type{white-space: break-spaces;animation: none;}
 	.slide-container img{height: 300px;}
 	.centered{
 		height: auto;
