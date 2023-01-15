@@ -20,9 +20,9 @@
 				border-radius: 10px;
 			}
 			.top-ui-center-content{
-				min-height: 300px;
+				min-height: 200px;
 				left: calc(50% - 20%);
-				top: calc(50% - 150px);
+				top: calc(50% - 100px);
 				color: rgb(212, 205, 205);
 				padding: 5px;
 				overflow: hidden;
@@ -250,24 +250,6 @@
 	</head>
 	<body onload="setInterval(startSlideShow, 10000)" class="scrollable-place" id="body">
 		<header>
-			<div class="max-width-650px navbar border-grey container">
-				<div class="left float s-third">
-					<a class="logo a" href="index.html">S E A</a>
-				</div>
-				<div class="right float s-seventh">
-					<a href="softtronic_services.html" class="a">Services</a>
-					<button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
-				</div>
-			</div>
-			<div class="sidenav max-width-650px" id="mysidenav">
-				<a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
-				<a class="active"href="index.html">Home</a>
-				<a href="softtronic_services.html">Service</a>
-				<a href="softtronic_about.html">About</a>
-				<a href="#">FAQ</a>
-				<a href="softtronic_contact.html">Support</a>
-				<a class="a" href="softtronic_blog.html">Blog</a>
-			</div>
 			<div class="desktop">
 				<div class="container t-center border-grey header-top-links">
 					<div class="s-seventh float left"><b>Accelerate your digital growth </b>, Transform your business with our unified Solutions.</div>
@@ -314,6 +296,26 @@
 						<button class="button" onclick="document.location='softtronic_blog.html'">Blog</button>
 					</div>
 				</div>
+			</div>
+			<div class="max-width-650px">
+				<div class="navbar container" id="navbar">
+					<div class="left s-sixth">
+						<a class="logo a" href="index.html">SOFTTRONIC</a>
+					</div>
+					<div class="right s-forth">
+						<button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="sidenav max-width-650px" id="mysidenav">
+				<a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
+				<a class="active" href="index.html">Home</a>
+				<a href="softtronic_services.html">Service</a>
+				<a href="softtronic_about.html">About</a>
+				<a href="#">FAQ</a>
+				<a class="a" href="softtronic_contact.html">Support</a>
+				<a class="a" href="softtronic_blog.html">Blog</a>
+			</div>
 		</header>
 		<div class="loading logo position-absolute" id="loading">SOFTTRONIC
 			<div class="sea_loader t-center" id="sea_loader">S E A</div>
@@ -325,7 +327,7 @@
 			</div>
 			
 			<div class="t-center position-absolute top-ui-center-content">
-				<div class="ui__info blurEffectIn">
+				<div class="ui__info blurEffectIn e-bold">
 					<span>DESIGN</span> <span>YOUR</span> <span>NETWORK</span>
 				</div>
 				<div class="ui__info_desc padding">
