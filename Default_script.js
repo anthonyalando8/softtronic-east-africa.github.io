@@ -128,9 +128,16 @@ window.onscroll = function()
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     var modal = document.getElementById('id01');
+    var sidenav = document.getElementById("mysidenav")
   if (event.target == modal) {
     closeModal();
   }
+  if(sidenav.clientWidth > 0){
+    if(event.target !== sidenav){
+        sidenav.style.width = "0px";
+    }
+  }
+  
 }
 
 function closeModal(){
