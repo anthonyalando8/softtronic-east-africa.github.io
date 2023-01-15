@@ -46,6 +46,11 @@ body{
 	from{border-right-color: rgba(100, 80, 80, 0.75);}
 	to{border-right-color: transparent;}
   }
+  .e-bold{
+	font-size: 40px;
+	font-weight: bolder;
+	color: rgb(11,11,69);
+}
 .border-grey
 {
 	border-bottom: 1px solid rgb(211,206,206);
@@ -196,6 +201,11 @@ header{
 header a{
 	padding: 5px;
 }
+.header-top-links{
+	height: 40px;
+	padding: 5px;
+	font-size: 12px;
+}
 .logo__name{
 	top: 15px;
 	line-height: 1.8;
@@ -206,10 +216,19 @@ header a{
 	padding: 5px;
 	font-weight: bold;
 	min-height: 40px;
-	background-color: rgb(221, 217, 217);
+	background-color: rgb(244, 242, 242);
 }
 .active{
 	color: orange!important;
+}
+.desktop .navbar .s-third button{
+	background-color: rgb(253, 178, 39);
+	padding: 10px;
+	border-radius: 5px;
+	width: 40%;
+	margin: auto;
+	color: white;
+	font-weight: bold;
 }
 .nav-links{
 	text-align: justify;
@@ -237,11 +256,18 @@ header a{
 	top: 0%;
 	z-index: 7;
 	width: 100%;
-	transition: background-color 1.5s, height 1.5s;
+	transition: background-color 2s;
 	height: 80px;
 	padding-top: 20px;
 	background-color: whitesmoke;
 	box-shadow: 0 10px 10px rgb(94, 72, 72);
+	animation: height 1s 1 linear;
+	overflow: hidden;
+}
+@keyframes height{
+	from{height: 0px;
+	padding-top: 0;}
+	to{height: 80px;}
 }
 .sticky a{
 	color: #131313;
@@ -249,9 +275,9 @@ header a{
 .dots-container .active{
  color: brown;
 }
-button{
+.button{
 	cursor: pointer;
-	border: none;
+	border: none!important;
 }
 .sidenav{
   height: 100%;
@@ -533,10 +559,18 @@ ul{
 
 /*Sign Up styling*/
 /* Full-width input fields */
-input[type=text], input[type=password] {
+.column{
+	width: 50%;
+	
+}
+.column , .row{
+	margin: 1%;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel] {
 	width: 100%;
 	padding: 15px;
-	margin: 5px 0 22px 0;
+	margin: 5px 0 0px 0;
 	display: inline-block;
 	border: none;
 	background: #f1f1f1;
@@ -711,5 +745,12 @@ input[type=text], input[type=password] {
 	.card img:hover{
 		filter: brightness(100%);
 		scale: 1.0;
+	}
+	.e-bold{
+		font-size: 28px;
+	}
+	.row, .column{
+		width: 100%!important;
+		margin: 0;
 	}
 }
