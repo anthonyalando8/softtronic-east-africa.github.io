@@ -370,7 +370,7 @@ header a{
 	z-index: 2;
 	width: 100%;
 	overflow: hidden;
-	height: 650px;
+	height: 600px;
 	animation: fadeIn 1s 1 linear;
 }
 @keyframes fadeIn{
@@ -400,8 +400,6 @@ header a{
 	to{transform: scale(1.0);}
 }
 .ui__info{
-	font-size: 48px;
-	font-weight: bold;
 	letter-spacing: 5px;
 }
 
@@ -726,7 +724,7 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
 		top: 25px;
 	}
 	.top-ui img, .top-ui{
-		height: 80vh!important;
+		height: 300px!important;
 	}
 	.top-ui-center-content{
 		width: 90%!important;
