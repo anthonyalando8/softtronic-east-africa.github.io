@@ -21,11 +21,11 @@
             width: 100%;
         }
         .top-bg-image img{
-            filter: brightness(50%);
+            filter: brightness(30%);
         }
         .wrapper-content{
             height: 100px;
-            width: 50%;
+            width: auto;
             padding-top: 20px;
             color: white;
             top: calc(70% - 50px);
@@ -66,6 +66,12 @@
             background-color: rgb(11,11,69);
         }
         @media (max-width: 650px){
+            .top-wrapper{
+                height: 300px;
+            }
+            .wrapper-content{
+                left: 30%;
+            }
             .message-container .s-half {
                 width: 95%!important;
                 margin-left: 2.5%;
@@ -128,7 +134,7 @@
         <div class="max-width-650px">
             <div class="navbar container" id="navbar">
                 <div class="left s-sixth">
-                    <a class="logo a"href="index.html">SOFTTRONIC</a>
+                    <a class="logo a" href="index.html">SOFTTRONIC</a>
                 </div>
                 <div class="right s-forth">
                     <button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
