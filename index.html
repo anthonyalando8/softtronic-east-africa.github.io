@@ -11,20 +11,6 @@
 		<script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
 		<title>Softtronic E A | Home</title>
 		<style>
-			header .animate{
-				color: white;
-				background-color: rgb(72,72,72);
-				font-weight: bold;
-			}
-			.desktop .navbar .s-third button{
-				background-color: rgb(253, 178, 39);
-				padding: 10px;
-				border-radius: 5px;
-				width: 40%;
-				margin: auto;
-				color: white;
-				font-weight: bold;
-			}
 			.slides button{
 				padding: 5px;
 				color: white;
@@ -49,7 +35,7 @@
 				border-radius: 5px;
 			}
 			.top-ui img{
-				filter: brightness(25%);
+				filter: brightness(50%);
 			}
 			.service_link{
 				box-shadow: 0 5px 5px rgb(212, 210, 210);
@@ -98,8 +84,6 @@
 				background-repeat: no-repeat;
 				color: white;
 				padding-top: 100px;
-
-				
 			}
 			.gmap_canvas {
 				overflow:hidden;
@@ -154,11 +138,7 @@
 				translate: 0px -5px;
 				box-shadow: 0 20px 20px rgb(226, 226, 244);
 			}
-			.e-bold{
-				font-size: 40px;
-				font-weight: bolder;
-				color: rgb(11,11,69);
-			}
+			
 			.bottom{
 				background-color: rgb(84, 120, 249);
 				background-image: linear-gradient(to right, rgb(32, 68, 197) , rgb(148, 162, 213));
@@ -240,10 +220,7 @@
 					height: 90%;
 					margin: auto;
 				}
-				.e-bold{
-					font-size: 28px;
-				}
-
+				
 				.bottom{
 					height: auto;
 				}
@@ -275,53 +252,49 @@
 		<header>
 			<div class="max-width-650px navbar border-grey container">
 				<div class="left float s-third">
-					<a class="logo a" href="index.html">S E A</a>
+					<a class="logo a" href="/">S E A</a>
 				</div>
 				<div class="right float s-seventh">
 					<a href="softtronic_services.html" class="a">Services</a>
 					<button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
 				</div>
 			</div>
-			<div class="sidenav" id="mysidenav">
+			<div class="sidenav max-width-650px" id="mysidenav">
 				<a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
-				<a class="active"href="index.html">Home</a>
+				<a class="active"href="/">Home</a>
 				<a href="softtronic_services.html">Service</a>
 				<a href="softtronic_about.html">About</a>
 				<a href="#">FAQ</a>
-				<a href="softtronic_contact.html">Contact</a>
+				<a href="softtronic_contact.html">Support</a>
+				<a class="a" href="softtronic_blog.html">Blog</a>
 			</div>
 			<div class="desktop">
-				<div class="container important-links position-absolute">
-					<div class="s-half left">
-						<ul class="__follow_links position-relative">
-							<li>
-								<a class="a" title="facebook" target="_blank"href="https://www.facebook.com/anthony.omukuyia.9/"><i class="fa-brands fa-square-facebook"></i></a>
-							</li>
-							<li>
-								<a class="a" title="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a>
-							</li>
-							<li>
-								<a class="a" title="twitter" href=""><i class="fa-brands fa-square-twitter"></i></a>
-							</li>
-						</ul>
-					</div>
-					<div class="s-half right __booking_link position-relative">
-						<a class="a" title="Click to call" href="tel:+254700536326">Call Now</a>
-					</div>
-
-				</div>
-				<div class="sea__logo__">
-					<div class="logo-image">
-							<a class="a" title="logo" href="index.html">
-								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/LOGO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673549300976">
-							</a>
+				<div class="container t-center border-grey header-top-links">
+					<div class="s-seventh float left"><b>Accelerate your digital growth </b>, Transform your business with our unified Solutions.</div>
+					<div class="s-third float right">
+						<div class="important-links">
+							<ul class="__follow_links position-relative">
+								<li>
+									<a class="a" title="facebook" target="_blank"href="https://www.facebook.com/anthony.omukuyia.9/"><i class="fa-brands fa-square-facebook"></i></a>
+								</li>
+								<li>
+									<a class="a" title="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a>
+								</li>
+								<li>
+									<a class="a" title="twitter" href=""><i class="fa-brands fa-square-twitter"></i></a>
+								</li>
+								<li>
+									<a class="a" title="Click to call" href="tel:+254700536326"><i class="fa-solid fa-phone-volume"></i></a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="navbar container" id="navbar">
 					<div class="s-seventh">
 						<ul class="nav-links a">
 							<li>
-								<a class="a active" href="index.html">Home</a>
+								<a class="a active" href="/">Home</a>
 							</li>
 							<li>
 								<a class="a" href="softtronic_services.html">Services</a>
@@ -333,15 +306,14 @@
 								<a class="a" href="#">FAQ</a>
 							</li>
 							<li>
-								<a class="a" href="softtronic_contact.html">Contact</a>
+								<a class="a" href="softtronic_contact.html">Support</a>
 							</li>
 						</ul>
 					</div>
 					<div class="s-third t-center">
-						<button class="button">Blog</button>
+						<button class="button" onclick="document.location='softtronic_blog.html'">Blog</button>
 					</div>
 				</div>
-			</div>
 		</header>
 		<div class="loading logo position-absolute" id="loading">SOFTTRONIC
 			<div class="sea_loader t-center" id="sea_loader">S E A</div>
@@ -770,7 +742,7 @@
 		<!--Back to the top-->
 
 		<div class="back-top" id="back-top">
-			<button class="top fn-bold position-absolute" onclick="topFunction()" title="Scroll to the top">Top</button>
+			<button class="top fn-bold position-absolute button" onclick="topFunction()" title="Scroll to the top">Top</button>
 		</div>
 		
 
