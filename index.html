@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="index.appcache">
 	<head>
 		
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Softtronic East Africa, Networking, CCTV, Server Configuration, Software Development and installation">
+		<meta name="description" content="Networking services">
+		<!--<meta http-equiv="refresh" content="5">-->
+		<meta name="author" content="Omukuyia Anthony Alando">
 		<link rel="shortcut icon" href="Favicon.ico">
 		<link rel="stylesheet" href="default.css" />
 		<script src="Default_script.js"></script>
@@ -332,13 +336,13 @@
 				</div>
 				<div class="ui__info_desc padding">
 					Recognize the value of well designed network.<br /><br />
-					<a class="a" href="#">Learn More </i></a>
+					<a class="a"  onclick="noService()">Learn More </i></a>
 				</div>
 			</div>
 		</div>
 		<div class="container t-center display-flex service_link">
 			<div class="s-sixth left float">See what softtronic can do for you.</div>
-			<div class="s-forth right float"><a  class="a"href="softtronic_services.html">View Now</a></div>
+			<div class="s-forth right float"><a  class="a"href="softtronic_services.html#services">View Now</a></div>
 		</div>
 		<div class="main">
 			<div class="centered t-center  mgn-top-5pc">
@@ -364,7 +368,7 @@
 								<div class="note t-center">
 									Simplified experiences will meet the changing needs of our customers
 									<br />
-									<button class="button" onclick="document.location='softtronic_contact.html'">Free Consultation</button>
+									<button class="button" onclick="document.location='softtronic_contact.html#message-form'">Free Consultation</button>
 								</div>
 							</div>
 							<div class="slides" id="slides">
@@ -442,7 +446,7 @@
 					</div>
 					<div class="s-half t-center">
 						<div class="s-sixth">
-							<a class="a"href="">
+							<a class="a" href="softtronic_about.html#achievements">
 								<div class="why-image"><img src="https://ik.imagekit.io/anthonyalando/Softtronic/achievements_bmCWvtFre?ik-sdk-version=javascript-1.4.3&updatedAt=1673535579837"alt="Softtronic achieves"></div>
 								<p class="fn-bold">Achievements.</p>
 								<p>See why this organisation is trusted with over 500,000+ customer.</p>
@@ -737,7 +741,7 @@
 			</div>
 		</div>
 		<div class="developer" title="Web designer">
-			Copyright 2022 @Anthony +254796211581
+			Copyright &copy; 2022 @Anthony +254796211581
 		</div>
 
 
@@ -787,12 +791,6 @@
 				});
 			</script>
 		  </div>
-		
-		<script>
-			function noService(){
-			alert('Service unavailable. \nTry again later.');
-			}
-		</script>
 		<script>
 			function onHover(){
 				for(let i = 100;i <= 107;i++){
