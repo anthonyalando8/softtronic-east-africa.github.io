@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar container" id="navbar">
+            <div class="navbar container" id="nav001">
                 <div class="s-seventh">
                     <ul class="nav-links a">
                         <li>
@@ -60,9 +60,9 @@
             </div>
         </div>
         <div class="max-width-650px">
-            <div class="navbar container" id="navbar">
+            <div class="navbar container" id="nav002">
                 <div class="left s-sixth">
-                    <a class="logo a"href="index.html">SOFTTRONIC</a>
+                    <a class="logo a" href="index.html">SOFTTRONIC</a>
                 </div>
                 <div class="right s-forth">
                     <button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
@@ -87,5 +87,15 @@
     <div class="back-top" id="back-top">
         <button class="top fn-bold position-absolute button" onclick="topFunction()" title="Scroll to the top">Top</button>
     </div>
+    <script>
+        function  topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        window.addEventListener("scroll", function(){
+            const navID = ["nav001","nav002"];
+            navID.forEach(addStickyClass);
+        });
+    </script>
 </body>
 </html>
