@@ -65,6 +65,41 @@
             color: white;
             background-color: rgb(11,11,69);
         }
+        .FAQs .s-seventh{
+            margin: auto;
+        }
+        .FAQs ul .right{
+            text-align: right;
+        }
+        
+        .FAQs ul{
+            padding: 0;
+            width: 100%;
+        }
+        .FAQs ul li.question{
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid rgb(203, 200, 200);
+        }
+        .FAQs ul li.question .question-title{
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid rgb(203, 200, 200);
+        }
+        .FAQs ul li.question:not(.FAQs ul li.question:last-child){
+            margin-bottom: 20px;
+        }
+        .FAQs .question-answer{
+            display: none;
+        }
+        .display-block .question-answer{
+            display: block;
+        }
+        .display-block span{
+            transform: rotate(90deg);
+        }
         @media (max-width: 650px){
             .top-wrapper{
                 height: 300px;
@@ -77,6 +112,9 @@
                 margin-left: 2.5%;
             }
             input[type=submit]{
+                width: 100%;
+            }
+            .FAQs .s-seventh{
                 width: 100%;
             }
         }
@@ -171,7 +209,7 @@
                     <p class="p">We just need a couple of hours!</p>
                 </div>
             </div>
-            <div class="s-half float right">
+            <div class="s-half float right" id="message-form">
                 <form action="message.php" method="post">
                     <div class="user-message-form">
                         <div class="container display-flex">
@@ -198,6 +236,136 @@
                 </form>
             </div>
         </div>
+
+        <div class="mgn-top-5pc FAQs">
+            <div class="s-seventh p">
+                <p class="e-bold">Essential Frequently Asked Questions.</p>
+                <p class="fn-bold">Below we have compiled the answers to the most frequently asked questions from clients.</p>
+                
+                <ul class="list-questions">
+                    <b class="fn-bold t-center">Computer FAQs</b>
+                    <li class="question">    
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                My computer does not turn on, what do I do now?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            First check the computer's power cord to make sure it is completely plugged into the wall socket. If you are using a plug strip, make sure it is completely plugged into the wall socket and that the power switch on the plug strip is turned on. Some plug strips also have a built in circuit breaker which usually looks like a black or red button near the power switch. Press the button to reset it and see if that solves the problem.
+                        </div>
+                    </li>
+                    <li class="question">
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                What do I do when my computer crashes?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            There are many reasons why a computer may just stop working or "freeze". Most of the time there isn't much we can do about it, it is a fact of life that computer programs have become so complex that occasionally users will experience problems even when performing common tasks. When your computer no longer responds to keyboard commands your best bet is to restart the computer.
+                        </div>
+                    </li>
+                    <li class="question">
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                What do I do if my hard disk fails to work?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            As with most computer errors, your first step is to shut down your computer and restart it. This will help you determine whether or not you actually have a hard disk problem. If the disk is severely damaged then your computer will probably fail to restart properly. If this is the case then contact MCWare IT Solutions, this is a job for the professionals.
+                        </div>
+                    </li>
+                    <b class="fn-bold t-center">Printer FAQs</b>
+                    <li class="question">    
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                My printer is printing smudged/distorted pages, what can I do?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            When printing on untraditional paper your printer may experience smudges, un-even or crooked text, and/or text that runs off the edges of the paper. Your printer may be printing fuzzy, blurry, and/or other faint text because of dirty print heads. All modern printers have some type of printer cleaning, self-test, and/or diagnose mode that can be performed to check and clean the printers print heads and other internal equipment used to print.
+                        </div>
+                    </li>
+                    <li class="question">    
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                How do I fix a paper jam?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            Turn off the printer. Inspect the location or tray the printed paper ejects to. If the stuck paper is visible manually remove it. Remove all paper trays and any paper that may be stuck between the tray and the printer. If the stuck paper is visible manually remove it. Open the printer door that allows you access to the printer ink cartridges or toner and look for any stuck paper. If the stuck paper is visible manually remove it. Turn the printer back on.
+                        </div>
+                    </li>
+                    <li class="question">    
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                I lost my printer installation disk, how can I install my printer?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            Thankfully a missing printer installation disk is not the end of the world and will not require you to wait until a new disk can be sent to you. Today all printer and other hardware manufacturers are providing downloads on the Internet to their software programs and drivers that are included with their products.
+                        </div>
+                    </li>
+                    <b class="fn-bold t-center">Network FAQs</b>
+                    <li class="question">    
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                I can't connect to my network drive anymore, what can I do?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            Verify that the network cable is properly connected to the back of the computer. In addition, when checking the connection of the network cable, ensure that the LED's on the network are properly illuminated. For example, a network card with a solid green LED or light usually indicates that the card is either connected or receiving a signal. Note: generally, when the green light is flashing, this is an indication of data being sent or received.
+                        </div>
+                    </li>
+                    <li class="question">    
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                How do I map a network drive?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            Open Microsoft Explorer. From Explorer, click the Tools drop down menu and click the option "Map Network Drive." Specify the network drive or network computer as the folder. If the computer's name was hope, to map to that computer, type \\hope If you wished to map to a shared folder on the hope computer such as a mp3 folder, you would type \\hope\mp3. If a different username or login is required to connect to this computer or drive it must be specified in this window before clicking the finish.
+                        </div>
+                    </li>
+                    <li class="question">    
+                        <div class="container question-title">
+                            <div class="s-seventh float left">
+                                How do I determine my computer's name?
+                            </div>
+                            <div class="s-third float right arrow">
+                                <span class="fn-bold">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="question-answer p">
+                            Right-click My Computer. Click Properties. In the Properties window, click the Computer Name tab. Within this tab you'll be able to see the full computer name, workgroup and also a description. If you wish to change the name or workgroup, click the Change button.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="back-top" id="back-top">
@@ -212,6 +380,33 @@
             const navID = ["nav001","nav002"];
             navID.forEach(addStickyClass);
         });
+    </script>
+
+    <script>
+        /*const question_title = document.getElementsByClassName('question-title');
+        question_title.addEventListener("click", function(){
+            document.getElementsByClassName("question-answer").classList.toggle("display-block");
+        });*/
+        
+        /*function showFaqAnswer() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('search');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("products");
+            li = ul.getElementsByTagName('li');
+          
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+              } else {
+                li[i].style.display = "none";
+              }
+            }
+        }*/
     </script>
 </body>
 </html>
