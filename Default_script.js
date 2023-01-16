@@ -172,3 +172,8 @@ function disableScrolling(){
 function enableScrolling(){
     document.getElementsByTagName("body")[0].classList.remove("stop-scrolling");
 }
+
+//Unavailable pop up
+function noService(){
+    alert('Service under development. \nTry again later.');
+}
