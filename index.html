@@ -272,7 +272,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="navbar container" id="navbar">
+				<div class="navbar container" id="nav001">
 					<div class="s-seventh">
 						<ul class="nav-links a">
 							<li>
@@ -298,7 +298,7 @@
 				</div>
 			</div>
 			<div class="max-width-650px">
-				<div class="navbar container" id="navbar">
+				<div class="navbar container" id="nav002">
 					<div class="left s-sixth">
 						<a class="logo a" href="index.html">SOFTTRONIC</a>
 					</div>
@@ -364,7 +364,7 @@
 								<div class="note t-center">
 									Simplified experiences will meet the changing needs of our customers
 									<br />
-									<button class="button" onclick="noService()">Free Consultation</button>
+									<button class="button" onclick="document.location='softtronic_contact.html'">Free Consultation</button>
 								</div>
 							</div>
 							<div class="slides" id="slides">
@@ -781,7 +781,10 @@
 			<script>
 				document.getElementById("close-modal").addEventListener("click", closeModal);
 				document.getElementById("cancelbtn").addEventListener("click", closeModal);
-				
+				window.addEventListener("scroll", function(){
+					const navID = ["nav001","nav002"];
+    				navID.forEach(addStickyClass);
+				});
 			</script>
 		  </div>
 		
