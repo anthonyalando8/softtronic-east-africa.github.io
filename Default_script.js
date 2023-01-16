@@ -1,15 +1,18 @@
+//function show loading before document opens
 document.onreadystatechange = function(){
     if(document.readyState !== "complete"){
         document.querySelector("body").style.visibility = "hidden";
         document.querySelector("#loading").style.visibility = "visible";
-        document.getElementById("body").classList.add("stop-scrolling");
+        disableScrolling();
     }
     else{
         document.querySelector("#loading").style.display = "none";
         document.querySelector("body").style.visibility = "visible";
-        document.getElementById("body").classList.remove("stop-scrolling");
+        enableScrolling();
     }
 };
+
+//checks if an element is in the viewport
 function isInViewPort(el){
     const rect = el.getBoundingClientRect();
     return(
@@ -20,12 +23,18 @@ function isInViewPort(el){
     );
 }
 
+//opens the side navigation panel
 function openNav(){
     document.getElementById("mysidenav").style.width = "250px";
+    disableScrolling();
 }
+
+//close navigation panel
 function closeNav(){
     document.getElementById("mysidenav").style.width = "0px";
+    enableScrolling();
 }
+window.addEventListener("resize", closeNav);
 /*function copyToClipboard(){
     for(let j = 300; j <= 305; j++){
         var copyClip = document.getElementById(j);
@@ -42,6 +51,7 @@ function closeNav(){
 }
 copyToClipboard();*/
 
+//apply animation on scrolling
 window.onscroll = function()
 {
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
@@ -115,17 +125,17 @@ window.onscroll = function()
     }
     slideInAnimation();
     window.addEventListener("resize", slideInAnimation);
-
-    var navbar = document.getElementById("navbar");
+};
+function addStickyClass(value){
+    var navbar = document.getElementById(value);
     var sticky = navbar.offsetTop;
     if (window.pageYOffset > sticky) {
         navbar.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
     }
-};
-
-// When the user clicks anywhere outside of the modal, close it
+}
+// When the user clicks anywhere outside of the modal, sidenav, close it
 window.onclick = function(event) {
     var modal = document.getElementById('id01');
     var sidenav = document.getElementById("mysidenav")
@@ -134,20 +144,31 @@ window.onclick = function(event) {
   }
   if(sidenav.clientWidth > 0){
     if(event.target !== sidenav){
-        sidenav.style.width = "0px";
+        closeNav();
     }
   }
   
 }
 
+//close sign up form
 function closeModal(){
     document.getElementById('id01').style.display="none";
-    document.getElementById("body").classList.remove("stop-scrolling");
+    enableScrolling();
 }
 
+//on document load display sign up form after 30 seconds
 window.addEventListener("load", function(){
     setTimeout(function(){
         document.getElementById("id01").style.display = "block";
-        document.getElementById("body").classList.add("stop-scrolling");
+        disableScrolling();
     }, 30000);
 });
+
+//disable scrolling the document
+function disableScrolling(){
+    document.getElementsByTagName("body")[0].classList.add("stop-scrolling");
+}
+//enable document scrolling
+function enableScrolling(){
+    document.getElementsByTagName("body")[0].classList.remove("stop-scrolling");
+}
