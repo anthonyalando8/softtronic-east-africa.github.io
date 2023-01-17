@@ -98,10 +98,10 @@
         .FAQs .question-answer{
             display: none;
         }
-        .display-block .question-answer{
+        .display-block + .question-answer{
             display: block;
         }
-        .display-block span{
+        .display-block .arrow .fn-bold{
             transform: rotate(90deg);
         }
         @media (max-width: 650px){
@@ -249,7 +249,7 @@
                 <ul class="list-questions">
                     <b class="fn-bold t-center">Computer FAQs</b>
                     <li class="question">    
-                        <div class="container question-title">
+                        <div class="container question-title" id="exp001">
                             <div class="s-seventh float left">
                                 My computer does not turn on, what do I do now?
                             </div>
@@ -262,7 +262,7 @@
                         </div>
                     </li>
                     <li class="question">
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp002">
                             <div class="s-seventh float left">
                                 What do I do when my computer crashes?
                             </div>
@@ -275,7 +275,7 @@
                         </div>
                     </li>
                     <li class="question">
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp003">
                             <div class="s-seventh float left">
                                 What do I do if my hard disk fails to work?
                             </div>
@@ -289,7 +289,7 @@
                     </li>
                     <b class="fn-bold t-center">Printer FAQs</b>
                     <li class="question">    
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp004">
                             <div class="s-seventh float left">
                                 My printer is printing smudged/distorted pages, what can I do?
                             </div>
@@ -302,7 +302,7 @@
                         </div>
                     </li>
                     <li class="question">    
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp005">
                             <div class="s-seventh float left">
                                 How do I fix a paper jam?
                             </div>
@@ -315,7 +315,7 @@
                         </div>
                     </li>
                     <li class="question">    
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp006">
                             <div class="s-seventh float left">
                                 I lost my printer installation disk, how can I install my printer?
                             </div>
@@ -329,7 +329,7 @@
                     </li>
                     <b class="fn-bold t-center">Network FAQs</b>
                     <li class="question">    
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp007">
                             <div class="s-seventh float left">
                                 I can't connect to my network drive anymore, what can I do?
                             </div>
@@ -342,7 +342,7 @@
                         </div>
                     </li>
                     <li class="question">    
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp008">
                             <div class="s-seventh float left">
                                 How do I map a network drive?
                             </div>
@@ -355,7 +355,7 @@
                         </div>
                     </li>
                     <li class="question">    
-                        <div class="container question-title">
+                        <div class="container question-title"id="exp009">
                             <div class="s-seventh float left">
                                 How do I determine my computer's name?
                             </div>
@@ -385,32 +385,16 @@
             navID.forEach(addStickyClass);
         });
     </script>
-
+    
     <script>
-        /*const question_title = document.getElementsByClassName('question-title');
-        question_title.addEventListener("click", function(){
-            document.getElementsByClassName("question-answer").classList.toggle("display-block");
-        });*/
-        
-        /*function showFaqAnswer() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('search');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("products");
-            li = ul.getElementsByTagName('li');
-          
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-              a = li[i].getElementsByTagName("a")[0];
-              txtValue = a.textContent || a.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-              } else {
-                li[i].style.display = "none";
-              }
-            }
-        }*/
+        const expander = ["exp001","exp002","exp003","exp004","exp005","exp006","exp007","exp008","exp009"];
+        expander.forEach(showQuestionAnswer);
+        function showQuestionAnswer(value){
+            var title = document.getElementById(value);
+            title.addEventListener("click", function(){
+                title.classList.toggle("display-block");
+            });
+        }
     </script>
 </body>
 </html>
