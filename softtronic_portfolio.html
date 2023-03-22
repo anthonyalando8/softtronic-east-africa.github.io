@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Omukuyia Anthony Alando, Anthony Alando, Omukuyia Portfolio, Softtronic East Africa">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>Anthony | Home</title>
+    <script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@900&display=swap');
+        body{
+            font-family: 'Open Sans', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        header,nav{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav{
+            background-color: rgb(230, 227, 227);
+            overflow: auto;
+            width: 100%;
+            height: 70px;
+            border-radius: 0px 0px 2px 2px;
+            box-shadow: 0 2px 2px rgb(156, 156, 156);
+        }
+        header > span{
+            font-size: 12px;
+            padding-left: 10px;
+        }
+        header ul, nav ul.nav-links{
+            display: flex;
+        }
+        ul.social-links, ul.nav-links, ul.contact-links{
+            list-style-type: none;
+        }
+        ul.social-links i, ul.nav-links li{
+            font-size: 20px;
+           padding: 0px 20px 0px 0px;
+        }
+        header i{
+            color: rgb(11,11,69);
+            text-decoration: none;
+        }
+        ul.nav-links a{
+            color: rgb(6, 6, 56);
+        }
+        ul.nav-links a:hover{
+            color: rgb(241, 162, 14);
+        }
+        button{
+            cursor: pointer;
+        }
+        .a{
+            text-decoration: none;
+        }
+        nav > span{
+            padding-left: 10px;
+            height: 60px;
+            width: 65px;
+        }
+        nav span img{
+         height: 100%;
+         width: 100%;
+         border-radius: 50%;
+        }
+        li.contacts ul.contact-links{
+            display: none;
+            overflow: auto;
+        }
+        li.contacts ul.contact-links > li{
+            padding: 10px;
+            background-color: rgb(252, 251, 251);
+            border-bottom: 1px solid rgb(218, 214, 214);
+        }
+        li.contacts ul.contact-links li:last-child{
+            border-bottom: none;
+        }
+        li.contacts ul.contact-links > li:first-child{
+            border-top: 1px solid rgb(218, 214, 214);
+        }
+        .hamburger{
+            padding-right: 10px;
+            display: none;
+        }
+        .hamburger button{
+            background-color: transparent;
+            border: none;
+            font-size: 28px;
+        }
+        .nav-active{
+            left: 0%;
+        }
+        .container{
+            display: flex;
+            width: 100%;
+        }
+        .container::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .float{
+            float: left;
+        }
+        .hero{
+            background-image: url("https://ik.imagekit.io/anthonyalando/My_Portfolio/glassy.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676279827254");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid white;
+        }
+        .hero-content{
+            width: 80%;
+            height: 80%;
+            margin: 60px auto;
+            background-color: white;
+            border-radius: 150px;
+            box-shadow: 0px 5px 5px rgb(3, 224, 254);
+        }
+        #hero-image{
+            height: 450px;
+            text-align: center;
+            width: 40%;
+        }
+        #hero-image img{
+            border-radius: 50%;
+            height: 100%;
+            box-shadow: 0px 5px 5px rgb(251, 252, 252);
+        }
+        #content-btn{
+            width: 60%;
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+        #content-btn > div{
+            font-size: 18px;
+        }
+        #content-btn > div > h1{
+               font-size: 24px;
+         }
+        #content-btn .frames{
+            text-transform: capitalize;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        #content-btn > div > h1.frames >span{
+            color: rgb(10, 11, 69);
+            opacity: 0;
+            animation: blurInOut 3.0s  3s infinite linear;
+        }
+        @keyframes blurInOut{
+            0%{
+                opacity: 0;
+                transform: scale(1.5);
+            }
+            25%{
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+            50%{
+                opacity: 1.0;
+                transform: scale(1.0);
+            }
+            75%{
+                opacity: 0.5;
+            }
+            95%{
+                opacity: 0;
+            }
+        }
+
+        .btn{
+            padding: 10px;
+            width: 250px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            letter-spacing: 1px;
+        }
+        .hero-btns{
+           justify-content: space-between;
+           align-items: center;
+            margin-top: 20px;
+        }
+        .btn-transparent{
+            background-color: transparent;
+            border: 1px solid rgb(218, 207, 207);
+        }
+        .btn-colored{
+            background-color: rgb(241, 162, 14);
+            color: white;
+        }
+        .main{
+            width: 90%;
+            margin: 0% 5%;
+        }
+        .about{
+            background-color: #131520;
+            color: #fdfcfc;
+            width: 100%;
+        }
+        .split-fifth{
+            width: 20%;
+        }.split-eighth{
+            width: 80%;
+        }
+        .about .split-fifth img{
+            width: 100%;
+            height: 100%;
+            filter: grayscale(25);
+        }
+        
+        
+        .scroll-section {
+            position: relative;
+            height: 100vh;
+            transform-origin: 0 0;
+        }
+        .slide-show-container > div{
+            animation: ch-opacity 2s 1;
+        }
+        @keyframes ch-opacity{
+            0%{opacity: 0;}
+            100%{opacity: 1.0;}
+        }
+        .slide-show-container > div:not(:first-child) {
+            display: none;
+        }
+        .position-absolute{
+            position: absolute;
+        }
+        .position-relative{
+            position: relative;
+        }
+        .stop-scrolling{
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .sticky{
+            position: fixed!important;
+            top: 0%;
+            z-index: 7;
+            width: 100%;
+            transition: background-color 2s;
+            background-color: whitesmoke;
+            box-shadow: 0 10px 10px rgb(94, 72, 72);
+            animation: height 1s 1 linear;
+            overflow: hidden;
+        }
+        @media screen and (max-width: 800px) {
+            header{
+                display: none;
+            }
+            ul.social-links{
+                padding: 0;
+                width: 100%;
+            }
+            nav{
+               height: 50px;
+            }
+            nav > span{
+               height: 40px;
+               width: 45px;
+            }
+            nav > ul{
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: -100%;
+                transition: left 0.5s;
+                padding: 0;
+                margin: 0;
+            }
+            nav ul, .contacts{
+                overflow: auto;   
+            }
+            nav ul a{
+               font-size: 14px;
+            }
+            nav ul.nav-links > li{
+                padding: 10px 5px!important;
+                border-bottom: 1.5px solid rgb(235, 229, 229);
+            }
+            .nav-bar ul.nav-links li.contacts:hover > ul.contact-links{
+                display: initial;
+            }
+            
+            .hamburger{
+                display: initial;
+            }
+            .main{
+                width: 95%;
+                margin: 0% 2.5%;
+            }
+            .split-fifth{
+            width: 100%;
+        }.split-eighth{
+            width: 100%;
+        }
+            .display-flex{
+                display: inline-block!important;
+            }
+            .hero{
+                height: auto;
+            }
+            .hero-content{
+                width: 95%;
+                height: auto;
+                margin: 20px 2.5%;
+                border-radius: 5px;
+            }
+            #hero-image{
+                height: 300px;
+                width: 100%;
+            }
+            #content-btn{
+                width: 100%;
+                padding-top: 10px;
+                padding-left: 0px;
+                text-align: center;
+            }  
+            #content-btn > div{
+               font-size: 14px;
+            } 
+            #content-btn > div > h1{
+               font-size: 16px;
+            } 
+            #content-btn > div > h1 + h1.frames{
+               font-size: 24px;
+            } 
+             .hero-btns{
+                width: 90%;
+                margin: auto;
+            }
+             .btn{
+                width: 100%;
+                margin-top: 10px;
+            }
+            .slide-show-container > div{
+                height: 300px;
+                overflow: hidden;
+             }
+        }
+    </style>
+    
+</head>
+<body id="body">
+
+    <script type="text/babel">
+      function Support() {
+
+        const styleDisplay = {
+            display: "flex"
+        };
+        return(
+            <>
+            <div>
+                <ul className="social-links" style={styleDisplay}>
+                    <li>
+                        <a className="a" title="facebook" href="https://www.facebook.com/anthony.omukuyia.9/"><i className="fa-brands fa-square-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a className="a" title="linkedin" href="#"><i className="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a className="a" title="twitter" href="#"><i className="fa-brands fa-square-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a className="a" title="Click to call" href="tel:+254700536326"><i className="fa-solid fa-phone-volume"></i></a>
+                    </li>
+                </ul>
+            </div>
+            </>
+        );
+      }
+      
+      ReactDOM.render(<Support />, document.getElementById('header-social-links'));
+
+      function Contacts(){
+        return(
+            <>
+                <a className="a">Contacts</a>
+                <ul className="contact-links">
+                    <li> <a className="a" href="#">Work</a> </li>
+                    <li> <a className="a" href="#">Office</a> </li>
+                    <li> <a className="a" href="#">Location</a> </li>
+                    <li> <a className="a" href="#">Send Mail</a> </li>
+                    <li className="social" id="more-contacts"> </li>
+                </ul>
+            </>
+        );
+        }
+    ReactDOM.render(<Contacts />, document.getElementById('contacts-nav'));
+
+    //const contact = ReactDOM.createRoot(document.getElementById("contacts-nav"));
+    //contact.render(<Contacts />);
+
+    
+    const support = ReactDOM.createRoot(document.getElementById("more-contacts"));
+    support.render(<Support />);
+    </script>
+
+
+    <header class="header">
+        <span>Welcome to my website</span>
+        <ul class="social-links" id="header-social-links"></ul>
+    </header>
+    <script>
+        function showNav(){
+            var nav = document.getElementById("nav-links");
+            nav.classList.toggle("nav-active");
+            document.getElementById('body').classList.toggle("stop-scrolling");
+        } 
+    </script>
+    <nav class="nav-bar" id="nav-bar">
+         <span> <a class="a logo" href="index.html">
+            <img src="https://ik.imagekit.io/anthonyalando/Softtronic/owner_b-ckrFH5Z?ik-sdk-version=javascript-1.4.3&updatedAt=1673014292036" alt="anthony">
+         </span>
+        <ul class="nav-links" id="nav-links">
+            <li> <a class="a" href="#">Home</a> </li>
+            <li> <a class="a" href="#">About</a> </li>
+            <li> <a class="a" href="#">Gallery</a> </li>
+            <li> <a class="a" href="#">Projects</a> </li>
+            <li class="contacts" id="contacts-nav"></li>
+        </ul>
+        <div class="hamburger">
+            <button class="btn-transparent button" onclick="showNav()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <script>
+      window.onscroll = function(){
+         var navbar = document.getElementById("nav-bar");
+         var sticky = navbar.offsetTop;
+         if (window.pageYOffset > sticky) {
+               navbar.classList.add("sticky");
+         } else {
+               navbar.classList.remove("sticky");
+         }
+      };
+    </script>
+    <div class="hero lazy-load">
+        <div class="hero-content container display-flex">
+            <div id="content-btn" class="float">
+               <div>
+                  Hello, welcome user! My name is <b> Omukuyia Anthony </b>
+                  <h1>Building digital products, brands and <span style="color: rgb(157, 0, 255)">experience.</span> </h1>
+                  <h1 class="frames">I DO <span id="frames"></span></h1>
+                  <script>
+                     const occ = ["WEB DESIGN","WEB BACKEND","ANDROID APPS","NETWORKING", "SOFTWARE DEV", "FREELANCING"];
+                     var occ_id = document.getElementById("frames");
+                     var i = 0;
+                     function changeContent() {         
+                     setTimeout(function() { 
+                           occ_id.innerHTML = occ[i];                    
+                           i++;                    
+                           if (i < occ.length) {           
+                              changeContent();             
+                           }
+                           else{
+                              i = 0;
+                              changeContent();
+                           }
+                           }, 3000)
+                     }
+                     changeContent();
+                  </script>   
+               </div>
+                <div class="hero-btns">
+                    <button class="btn-transparent btn">Hire Me</button>
+                    <button class="btn-colored btn">Call Me</button>
+                </div>   
+            </div>
+            <div id="hero-image" class="float">
+                <img src="https://ik.imagekit.io/anthonyalando/My_Portfolio/anthony.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676279754293" alt="Anthony">
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="about">
+            <div class="container display-flex">
+                <div class="split-fifth">
+                    <img src="https://ik.imagekit.io/anthonyalando/Softtronic/Anthony.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672598137157" alt="anthony">
+                </div>
+                <div class="about-content slide-show-container position-relative scroll-sectio split-eighth">
+                    <div class="slide" id="slide1">
+                        <p>Hi, I'm Omukuyia Anthony, a IT guy with 4 years of experience in Web Design. 
+                            I'm passionate about coding and have a proven track record of web designs.</p>
+
+                        <p>After completing my degree in IT at Kenyatta University, I started my career at google. 
+                            Since then, I've worked at several other companies, honing my skills in programming.</p>
+                    </div>
+                    <div class="slide" id="slide2">
+                        <p>I specialize in data analysis, and have worked on projects ranging from web development, 
+                            android development. In my free time, I enjoy reading the Bible.
+                    
+                        If you're interested in learning more about my work, please feel free to contact me.</p>
+                    </div>
+                    <script>
+                        function createSlideShow() {
+                        var currentSlideIndex = 0;
+                        var slides = document.querySelectorAll(".slide-show-container > div");
+
+                        function slideShow() {
+                            slides[currentSlideIndex].style.display = "none";
+                            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                            slides[currentSlideIndex].style.display = "block";
+                        }
+
+                        slides[currentSlideIndex].style.display = "block";
+                        setInterval(slideShow, 3000); // change slide every 3 seconds
+                        }
+
+                        createSlideShow();
+                    </script>
+                    
+                </div>
+                <!--<script>
+                    const locoScroll = new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    smooth: true
+                    });
+
+                    locoScroll.addElements(document.querySelectorAll('.scroll-section'));
+
+                </script>-->
+                <!--<script>
+                    // Get all the elements with the class "lazy-load"
+                    const lazyLoadElements = document.querySelectorAll('.lazy-load');
+
+                    // Create an Intersection Observer instance
+                    const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                        // If the element is in the viewport, load its HTML content
+                        entry.target.innerHTML = entry.target.dataset.content;
+                        observer.unobserve(entry.target);
+                        }
+                    });
+                    });
+
+                    // Observe each lazy-load element
+                    lazyLoadElements.forEach((element) => {
+                    observer.observe(element);
+                    });
+                </script>-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Softtronic East Africa, Softtronic East Africa Blog, Softtronic East Africa">
+    <meta name="description" content="Networking services">
+    <!--<meta http-equiv="refresh" content="5">-->
+    <meta name="author" content="Omukuyia Anthony Alando">
+    <link rel="shortcut icon" href="Favicon.ico">
+    <link rel="stylesheet" href="default.css" />
+    <script src="Default_script.js"></script>
+    <script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Softtronic E A | Contacts</title>
+</head>
+<body>
+    <header>
+        <div class="desktop">
+            <div class="container t-center border-grey header-top-links">
+                <div class="s-seventh float left"><b>Accelerate your digital growth </b>, Transform your business with our unified Solutions.</div>
+                <div class="s-third float right">
+                    <div class="important-links">
+                        <ul class="__follow_links position-relative">
+                            <li>
+                                <a class="a" title="facebook" target="_blank"href="https://www.facebook.com/anthony.omukuyia.9/"><i class="fa-brands fa-square-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a class="a" title="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a class="a" title="twitter" href=""><i class="fa-brands fa-square-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a class="a" title="Click to call" href="tel:+254700536326"><i class="fa-solid fa-phone-volume"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar container" id="nav001">
+                <div class="s-seventh">
+                    <ul class="nav-links a">
+                        <li>
+                            <a class="a" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="a" href="softtronic_services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="a" href="softtronic_about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="a" href="softtronic_contact.html#FAQs">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="a" href="softtronic_contact.html">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="s-third t-center">
+                    <button class="button" onclick="document.location='softtronic_blog.html'">Blog</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-width-650px">
+            <div class="navbar container" id="nav002">
+                <div class="left s-sixth">
+                    <a class="logo a" href="index.html">SOFTTRONIC</a>
+                </div>
+                <div class="right s-forth">
+                    <button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="sidenav max-width-650px" id="mysidenav">
+            <a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="softtronic_services.html">Service</a>
+            <a href="softtronic_about.html">About</a>
+            <a href="softtronic_contact.html#FAQs">FAQ</a>
+            <a class="a" href="softtronic_contact.html">Support</a>
+            <a class="a active" href="softtronic_blog.html">Blog</a>
+        </div>
+	</header>
+    <div class="loading logo position-absolute" id="loading">SOFTTRONIC
+        <div class="sea_loader t-center" id="sea_loader">S E A</div>
+    </div>
+
+    <div id="mydiv"></div>
+
+    <div class="back-top" id="back-top">
+        <button class="top fn-bold position-absolute button" onclick="topFunction()" title="Scroll to the top">Top</button>
+    </div>
+    <script>
+        function  topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        window.addEventListener("scroll", function(){
+            const navID = ["nav001","nav002"];
+            navID.forEach(addStickyClass);
+        });
+    </script>
+</body>
+</html>

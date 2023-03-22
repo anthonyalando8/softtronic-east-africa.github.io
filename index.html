@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" manifest="index.appcache">
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Softtronic East Africa, Networking Configuration, CCTV installation, Server Configuration, Software Development and installation, Softtronic East Africa Website">
+		<meta name="description" content="Networking services">
+		<!--<meta http-equiv="refresh" content="5">-->
+		<meta name="author" content="Omukuyia Anthony Alando">
+		<link rel="shortcut icon" href="Favicon.ico">
+		<link rel="stylesheet" href="default.css" />
+		<script src="Default_script.js"></script>
+		<script src="https://kit.fontawesome.com/3695de9773.js" crossorigin="anonymous"></script>
+		<title>Softtronic E A | Home</title>
+		<style>
+			.top-ui-center-content{
+				min-height: 200px;
+				left: calc(50% - 20%);
+				top: calc(50% - 100px);
+				color: rgb(212, 205, 205);
+				padding: 5px;
+				overflow: hidden;
+				box-shadow: 0 20px 35px rgb(148, 148, 243);
+			}
+			.ui__info_desc a{
+				color: rgb(148, 148, 243);
+				border: 2px solid rgb(148, 148, 243);
+				border-radius: 5px;
+			}
+			.top-ui img{
+				filter: brightness(50%);
+			}
+			.service_link{
+				box-shadow: 0 5px 5px rgb(212, 210, 210);
+				padding: 20px;
+				font-size: 20px;
+			}
+			.service_link .s-forth a{
+				background-color: rgb(253, 178, 39);
+				padding: 5px;
+				border-radius: 5px;
+				width: 50%;
+			}
+			.animate{
+				font-size: 28px;
+			}
+			.animate .scroll{
+				animation: scroll 2s ease-in-out normal infinite;
+			}
+			@keyframes scroll{
+				from {
+				letter-spacing: normal;
+				}
+				to {
+				letter-spacing: 2px;
+				}
+			}
+			.centered{
+				padding-top: 60px;
+				padding-bottom: 10px;
+				height: 250px;
+				margin-top: 30px;
+				color: rgb(1, 1, 40);
+				box-shadow: 0px 10px 10px rgb(202, 198, 198);
+				line-height: 1.8;
+				border-radius: 15px;
+				z-index: 3;
+			}
+			.slide-rotate .fa-solid{
+				font-size: 60px;
+			}
+			.right .slide-two{
+				height: 100%;
+				margin: auto;
+				overflow: hidden;
+				border-radius: 5px;
+				background-color: rgb(243, 240, 240);
+			}
+			.slides button{
+				padding: 5px;
+				color: white;
+				font-weight: bold;
+				background-color: blue;
+				border: none;
+				border-radius: 10px;
+			}
+			.slide-rotate
+			{
+				margin: 5px;
+				min-height: 300px;
+				background-color: rgb(184, 184, 252);
+				border-radius: 15px;
+				animation: bg 10s infinite;
+				display: none;
+				overflow: hidden;
+			}
+			@keyframes bg{
+				from {
+					background: linear-gradient(to left, rgb(184, 184, 252) 0%, rgb(219, 219, 245) 100%);
+				}
+				to{
+					background: linear-gradient(to left, rgb(219, 219, 245) 0%, rgb(184, 184, 252) 100%);
+				}
+			}
+			.slide-two-bottom-content{
+				min-height: calc(100% - 300px);
+				background-image: url('https://ik.imagekit.io/anthonyalando/Softtronic/back-card_Gk4Pv8lGl?ik-sdk-version=javascript-1.4.3&updatedAt=1673553564856');
+				background-size: cover;
+				background-repeat: no-repeat;
+				color: white;
+				padding-top: 100px;
+			}
+			.gmap_canvas {
+				overflow:hidden;
+				background:none!important;
+				height:500px;
+				width:100%;
+			}
+			.mapouter{
+				text-align:right;
+				height:500px;width:100%;
+			}
+			.main-office{
+				background-color: whitesmoke;
+				margin-top: 20px;
+			}
+			.location-details{
+				padding-top: 20px;
+			}
+			.name{
+				font-size: 20px;
+				color: brown;
+			}
+			.name img{
+				border-radius: 50%;
+			}
+			.details{
+				color: green;
+			}
+			.why_sea .s-half{
+				height: 300px;
+				overflow: hidden;
+			}
+			.why_sea .why-image{
+				width: 100%;
+				height: 150px;
+				overflow: hidden;
+			}
+			.why-image img{
+				height: 100%;
+				width: 100%;
+			}
+			.why_sea .s-half > .s-sixth{
+				border:1px solid rgb(196, 196, 247);
+				box-shadow: 0 5px 5px rgb(226, 226, 244);
+				border-radius: 5px;
+				height: 90%;
+				margin: auto;
+			}
+			.why_sea .s-half > .s-sixth:hover{
+				transition: translate 0.5s;
+				translate: 0px -5px;
+				box-shadow: 0 20px 20px rgb(226, 226, 244);
+			}
+			.card{
+				height: 30vh;
+				margin: 1%;	
+				overflow: hidden;	
+			}
+			.card-content{
+				width: 100%;
+				height: 30vh;
+				top: 0%;
+				transition: top 1s, left 1s,right 1s;
+				z-index: 5;
+			}
+			.card-image{
+				height: 30vh;
+				overflow: hidden;
+			}
+			.card-content img{
+				width: 100%;
+				height: 100%;
+			}
+			.card img:hover{
+				filter: brightness(25%);
+				transition: scale 1s;
+				scale: 1.5;
+			}
+			.card-desc-desktop{
+				position: absolute;
+				top: 30%;
+				left: 10%;
+				display: none;
+				color: white;
+			}
+			.bottom{
+				background-color: rgb(84, 120, 249);
+				background-image: linear-gradient(to right, rgb(32, 68, 197) , rgb(148, 162, 213));
+				color: white;
+				height: 700px;
+				margin-bottom: 0!important;
+				overflow: hidden;
+			}
+			.bottom .e-bold{
+				margin: 0;
+				text-align: center;
+			}
+			.bottom .container{
+				height: 100%;
+			}
+			.bottom .s-half{
+				height: 80%;
+			}
+			.bottom .s-half .content{
+				width: 80%;
+				margin: auto;
+				height: 100%;
+			}
+			.bottom .bottom-images{
+				margin: auto;
+				height: 40%;
+			}
+			.bottom .bottom-images .fa-solid{
+				font-size: 150px;
+				color: rgb(4, 35, 69);
+			}
+			@media (max-width: 650px){
+				.centered{
+					height: auto;
+				}
+				.consult{
+					width: 100%;
+				}
+				.mySlides .left,.mySlides .right{
+					float: left;
+					width: 100%;
+				}
+				.mySlides .right{
+					margin-top: 10%;
+				}
+				.right .slide-two{
+					width: 100%;
+				}
+				.right .slide-rotate{
+					min-height: 350px;
+				}
+				.slide-two-bottom-content{
+					padding-top: 50px;
+				}
+				.service_link .s-sixth, .service_link .s-forth{
+					width: 100%;
+				}
+				.service_link .s-forth{
+					margin-top:10px ;
+				}
+				.location {
+				display: inline-block;
+				}
+				.location .left, .location .right{
+					width: 100%;
+					height: auto;
+					float: left;
+					margin-top: 10px;
+					text-align: center;
+				}
+				.why_sea .s-half{
+					height: 300px;
+					width: 95%;
+					margin: auto;
+				}
+				.why_sea .s-half > .s-sixth{
+					width: 95%;
+					height: 90%;
+					margin: auto;
+				}
+				.card-container .s-half{
+					width: 100%;
+				}
+				.card
+				{
+					height: 40vh;
+				}
+				.card img:hover{
+					filter: brightness(100%);
+					scale: 1.0;
+				}
+				.bottom{
+					height: auto;
+				}
+				.bottom .container{
+					height: auto;
+				}
+				.bottom .s-half{
+					width: 100%;
+					margin: auto;
+					height: auto;
+				}
+				.bottom .s-half .content{
+					height: 100%;
+					width: 95%;
+				}
+				.bottom .bottom-images{
+					height: auto;
+				}
+				.bottom .bottom-images .fa-solid{
+					font-size: 100px;
+					color: rgb(4, 35, 69);
+				}
+				.bottom .e-bold{text-align: left;}
+			}
+			
+		</style>
+	</head>
+	<body onload="setInterval(startSlideShow, 10000)" class="scrollable-place" id="body">
+		<header>
+			<div class="desktop">
+				<div class="container t-center border-grey header-top-links">
+					<div class="s-seventh float left"><b>Accelerate your digital growth </b>, Transform your business with our unified Solutions.</div>
+					<div class="s-third float right">
+						<div class="important-links">
+							<ul class="__follow_links position-relative">
+								<li>
+									<a class="a" title="facebook" target="_blank"href="https://www.facebook.com/anthony.omukuyia.9/"><i class="fa-brands fa-square-facebook"></i></a>
+								</li>
+								<li>
+									<a class="a" title="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a>
+								</li>
+								<li>
+									<a class="a" title="twitter" href=""><i class="fa-brands fa-square-twitter"></i></a>
+								</li>
+								<li>
+									<a class="a" title="Click to call" href="tel:+254700536326"><i class="fa-solid fa-phone-volume"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="navbar container" id="nav001">
+					<div class="s-seventh">
+						<ul class="nav-links a">
+							<li>
+								<a class="a active" href="index.html">Home</a>
+							</li>
+							<li>
+								<a class="a" href="softtronic_services.html">Services</a>
+							</li>
+							<li>
+								<a class="a" href="softtronic_about.html">About</a>
+							</li>
+							<li>
+								<a class="a" href="softtronic_contact.html#FAQs">FAQ</a>
+							</li>
+							<li>
+								<a class="a" href="softtronic_contact.html">Support</a>
+							</li>
+						</ul>
+					</div>
+					<div class="s-third t-center">
+						<button class="button" onclick="document.location='softtronic_blog.html'">Blog</button>
+					</div>
+				</div>
+			</div>
+			<div class="max-width-650px">
+				<div class="navbar container" id="nav002">
+					<div class="left s-sixth">
+						<a class="logo a" href="index.html">SOFTTRONIC</a>
+					</div>
+					<div class="right s-forth">
+						<button class="button fn-bold" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="sidenav max-width-650px" id="mysidenav">
+				<a href="javascript:void(0)" class="closebtn position-absolute" onclick="closeNav()">&times;</a>
+				<a class="active" href="index.html">Home</a>
+				<a href="softtronic_services.html">Service</a>
+				<a href="softtronic_about.html">About</a>
+				<a href="softtronic_contact.html#FAQs">FAQ</a>
+				<a class="a" href="softtronic_contact.html">Support</a>
+				<a class="a" href="softtronic_blog.html">Blog</a>
+			</div>
+		</header>
+		<div class="loading logo position-absolute" id="loading">SOFTTRONIC
+			<div class="sea_loader t-center" id="sea_loader">S E A</div>
+		</div>
+		
+		<div class="t-center top-ui position-relative">
+			<div class="position-absolute top-image-container">
+				<img src="https://ik.imagekit.io/anthonyalando/Softtronic/programmer_InvdPlg2d?ik-sdk-version=javascript-1.4.3&updatedAt=1673012765343">
+			</div>
+			
+			<div class="t-center position-absolute top-ui-center-content">
+				<div class="ui__info blurEffectIn e-bold">
+					<span>DESIGN</span> <span>YOUR</span> <span>NETWORK</span>
+				</div>
+				<div class="ui__info_desc padding">
+					Recognize the value of well designed network.<br /><br />
+					<a class="a p"  onclick="noService()">Learn More </i></a>
+				</div>
+			</div>
+		</div>
+		<div class="container t-center display-flex service_link">
+			<div class="s-sixth left float">See what softtronic can do for you.</div>
+			<div class="s-forth right float"><a  class="a"href="softtronic_services.html#services">View Now</a></div>
+		</div>
+		<div class="main">
+			<div class="centered t-center  mgn-top-5pc">
+				<div class="max-width-650px">
+					<div class="animate">
+						<div class="scroll">
+							SOFTTRONIC EAST AFRICA
+						</div>
+					</div>
+				</div>
+				We practice solution-focused technologies, and we can help you tap into your unavailable solutions and uncover your org.<br /> 
+				Helping you understand and resolve challenges in your org is our primary focus. <br />
+				Through enhancing your personal tools, we can help you grow in all areas of your businesses technically.
+			</div>
+			<div class="container mySlides display-flex mgn-top-5pc">
+					<div class="left s-half">
+						<div class="slide-container t-center">
+							<div class="slides" id="slides">
+								<div class="slides-images" id="gallery">
+									<img src="https://ik.imagekit.io/anthonyalando/Softtronic/laptop-coding_RjVBHL6W0?ik-sdk-version=javascript-1.4.3&updatedAt=1673014373447"alt="coding" />
+								</div>
+								<div class="note t-center">
+									Simplified experiences will meet the changing needs of our customers
+									<br />
+									<button class="button" onclick="document.location='softtronic_contact.html#message-form'">Free Consultation</button>
+								</div>
+							</div>
+							<div class="slides" id="slides">
+								<div class="slides-images" id="gallery">
+									<img src="https://ik.imagekit.io/anthonyalando/Softtronic/sw-install_VvyQRMJ32?ik-sdk-version=javascript-1.4.3&updatedAt=1673014420751" alt="Software Installation">
+								</div>
+								<div class="note t-center">
+									We specialize in installation and configuring all types of software! Services.
+								</div>
+							</div>
+							<div class="slides" id="slides">
+								<div class="slides-images" id="gallery">
+									<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-image-slide_QXOAN6PSj?ik-sdk-version=javascript-1.4.3&updatedAt=1673014497255"alt="cctv installation">
+								</div>
+								<div class="note t-center">
+									We supply and install security cameras for your home or business at affordable prices. Secure your home today without breaking the bank
+								</div>
+							</div>
+							<div class="dots-container t-center">
+								<i class="nav" onclick="plusSlide(-1)"> ❮ </i>
+								<i class="dots active">•</i>
+								<i class="dots">•</i>
+								<i class="dots">•</i>
+								<i class="nav" onclick="plusSlide(1)"> ❯ </i>
+							</div>
+						</div>		
+					</div>
+					<div class="right t-center s-half">
+						<div class="slide-two s-seventh">
+							<div class="slide-rotate p">
+								<i class="fa-solid fa-network-wired"></i><br />
+								<p><b>Networking</b></p>
+								<p>Softtronic provide a single vision that ensures your network
+									is ready to rapidly respond to changing business needs across multiple devices, 
+									applications and locations. We help you achieve a simplified, agile and cost-effective network.
+								</p>
+							</div>
+							<div class="slide-rotate p">
+								<i class="fa-solid fa-computer"></i>
+								<br />
+								<p><b>IT Consultancy</b></p>
+								<p>Our information and communications technology (ICT) consultancy ensures 
+									technology not only meets the requirements of its users but that it is implemented 
+									and managed to realise the promised benefits.
+								</p>
+							</div>
+							<div class="slide-rotate p">
+								<i class="fa-solid fa-lock"></i>
+								<br />
+								<p><b>Smart Security</b></p>
+								<p>Softtronic has the State-of-the-art access control software that integrates the 
+									most advanced security technologies with innovative networking capabilities to 
+									bring you full-featured security solutions.
+								</p>
+							</div>
+							<div class="slide-two-bottom-content t-center padding">
+								<p class="p">With people being accommodated and tangled with devices and technologies, confidence and trust have been built towards digital technologies.</p>
+					
+							</div>
+						</div>
+					</div>
+				
+			</div>
+				<div  class="why_sea mgn-top-5pc t-center padding">
+					<p class="e-bold  auto-type">The foundation of high-performing Networks.</p>
+				<div class="container display-flex mgn-top-5pc padding">
+					<div class="s-half t-center">
+						<div class="s-sixth">
+							<a class="a"href="">
+								<div class="why-image"><img src="https://ik.imagekit.io/anthonyalando/Softtronic/why-image-one_LJHoqpBgG?ik-sdk-version=javascript-1.4.3&updatedAt=1673535031874"alt="Softtronic project"></div>
+								<p class="fn-bold">Softtronic Projects.</p>
+								<p>Explore on our major projects in recent years.</p>
+							</a>
+						</div>
+					</div>
+					<div class="s-half t-center">
+						<div class="s-sixth">
+							<a class="a" href="softtronic_about.html#achievements">
+								<div class="why-image"><img src="https://ik.imagekit.io/anthonyalando/Softtronic/achievements_bmCWvtFre?ik-sdk-version=javascript-1.4.3&updatedAt=1673535579837"alt="Softtronic achieves"></div>
+								<p class="fn-bold">Achievements.</p>
+								<p>See why this organisation is trusted with over 500,000+ customer.</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container c-h-fixed mgn-top-5pc position-relative" id="c-h-fixed">
+				<div class="s-seventh float">
+					<img src="https://ik.imagekit.io/anthonyalando/Softtronic/podium-abs_2NB6VwCyG?ik-sdk-version=javascript-1.4.3&updatedAt=1673535884403">
+				</div>
+				<div class="s-half p-abs position-absolute float" id="p-abs">
+					<div class="padding p-rel position-relative" id="p-rel">
+						We have entered the next era of digital transformation. 
+						It is characterized by a growing convergence of product across all industries.
+					</div>
+				</div>
+			</div>
+			<div class="card-container mgn-top-5pc" id="discover">
+				<div class="fn-bold">
+					Discover
+				</div>
+				<div class="container display-flex">
+					<div class="s-half">
+						<div class="container">
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="100">
+									<a class="a" href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/group_SLl0vODn8?ik-sdk-version=javascript-1.4.3&updatedAt=1673014813575">
+										</div><p class="card-desc" id="200">
+											IT and business.
+										</p>
+									</a></div>
+								</div>
+							</div>
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="101">
+									<a class="a"href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/team-work_GNdqK29RWr?ik-sdk-version=javascript-1.4.3&updatedAt=1673014184925">
+									</div><p class="card-desc"id="201">
+											Team Work
+										</p>
+									</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="s-half">
+						<div class="container">
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="102">
+									<a class="a"href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/cctv-svl_zKPiiAmiI?ik-sdk-version=javascript-1.4.3&updatedAt=1673014128050">
+									</div><p class="card-desc"id="202">
+											Modern Cameras
+										</p>
+									</a></div>
+								</div>
+							</div>
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="103">
+									<a class="a"href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/wifi-router_SK8gMSCaW?ik-sdk-version=javascript-1.4.3&updatedAt=1673013828174">
+									</div><p class="card-desc"id="203">
+											Brand routers.
+										</p>
+									</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container display-flex" id="card-container">
+					<div class="s-half">
+						<div class="container">
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="104">
+									<a class="a"href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/switch_Zi4De8WBJ?ik-sdk-version=javascript-1.4.3&updatedAt=1673013909310">
+									</div><p class="card-desc"id="204">
+											Quality switch & cables.
+										</p>
+									</a></div>
+								</div>
+							</div>
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="105">
+									<a class="a"href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/circuit_TTdMvtuZv?ik-sdk-version=javascript-1.4.3&updatedAt=1673014009875">
+									</div><p class="card-desc"id="205">
+											PC Maintainance
+										</p>
+									</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="s-half">
+						<div class="container">
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="106">
+									<a class="a"href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/laptop-blank_1sJHJwuRb?ik-sdk-version=javascript-1.4.3&updatedAt=1673015078581">
+									</div><p class="card-desc"id="206">
+											Explore latest laptops
+										</p>
+									</a></div>
+								</div>
+							</div>
+							<div class="s-half">
+								<div class="card position-relative">
+									<div class="card-content position-absolute"id="107">
+									<a class="a"href="#">
+										<div class="card-image">
+										<img src="https://ik.imagekit.io/anthonyalando/Softtronic/home-pic_A4VpPPsRm?ik-sdk-version=javascript-1.4.3&updatedAt=1673014070671">
+									</div><p class="card-desc"id="207">
+											Secure your home.
+										</p>
+									</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-office ">
+				<div class="location container display-flex mgn-top-5pc">
+					<div class="left s-half">
+						<div class="mapouter">
+							<div class="gmap_canvas">
+								<iframe width="100%" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=Mache%20Plaza&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+								</iframe>
+								<a href="https://123movies-to.org"></a>
+								<br />
+								<a href="https://www.embedgooglemap.net">google maps html embed</a>
+							</div>
+						</div>
+					</div>
+					<div class="right s-half">
+						<div class="location-details t-center">
+							<div class="name">
+								SOFTTRONIC EAST AFRICA
+							</div>
+							<div class="details">
+								Mache Plaza 1st Floor Suit No. 3
+							</div>
+							<div class="name">
+								<img src="https://ik.imagekit.io/anthonyalando/Softtronic/owner_b-ckrFH5Z?ik-sdk-version=javascript-1.4.3&updatedAt=1673014292036" width="60%" alt="Founder" />
+								<br />
+								Paul M Omukuyia
+								<hr />
+							</div>
+							<div class="details">
+								Technical Engineer
+								<br />
+								+254720259844
+								<br />
+								softroniceastafrica@gmail.com
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mgn-top-5pc bottom">
+			<p class="e-bold p">Why Choose Us?</p>
+			<div class="container display-flex">
+				<div class="s-half float">
+					<div class="container display-flex">
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images">
+								<i class="fa-solid fa-brain"></i>
+							</div>
+							<p class="fn-bold p">Collaborative and service-minded</p>
+							<p class="p">Customer experience delivered by cross-functional pods that pair service agents with colleagues throughout the organization for case swarming.</p>
+						</div>
+						</div>
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images s-sixth">
+								<i class="fa-solid fa-group-arrows-rotate"></i>
+							</div>
+							<p class="fn-bold p">Responsible and people driven</p>
+							<p class="p">Team is highly motivated and always looking for new challenges. They are ambitious and competitive, always striving to be the best.</p>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="s-half float">
+					<div class="container display-flex">
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images s-sixth">
+								<i class="fa-solid fa-shield"></i>
+							</div>
+							<p class="fn-bold p">Reliable performance and safety</p>
+							<p class="p">We are performance-motivated. Everyone wants to be successful at work. When we achieve goals, our brain rewards us with dopamine and we feel good about ourselves.</p>
+						</div>
+						</div>
+						<div class="s-half float">
+							<div class="content">
+							<div class="bottom-images s-sixth">
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<p class="fn-bold p">Fully configurable and future-proof</p>
+							<p class="p">We anticipate the future and developing methods of minimizing the effects of shocks and stresses of future events.</p>
+						</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+		<div class="max-width-650px">
+			<div class="container footer mgn-top-5pc">
+				<div class="left s-half">
+					<ul>
+						<b>Contacts</b>
+						<li title="Copy to clipbord" id="303">254700536326</li>
+						<li title="Copy to clipbord" id="304">254702511706</li>
+						<li title="Copy to clipbord" id="305">254796211581</li>
+					</ul>
+				</div>
+				<div class="right t-center s-half">
+					<ul>
+						<li><a href="" class="a">Privacy policy</a></li>
+						<li><a href="" class="a">T&C</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="desktop">
+			<div class="container footer mgn-top-5pc">
+				<div class="left s-half">
+					<div class="container">
+						<div class="left s-half">
+							<ul>
+								<b>Contacts</b>
+								<li title="Copy to clipbord" id="300">254700536326</li>
+								<li title="Copy to clipbord" id="301">254702511706</li>
+								<li title="Copy to clipbord"id="302">254796211581</li>
+							</ul>
+						</div>
+						<div class="right t-center s-half">
+							<ul>
+								<li><a href="#discover" class="a">Descover</a></li>
+								<li><a href="" class="a">Offers</a></li>
+								<li><a href="" class="a">Locations</a></li>
+								<li><a href="" class="a">Quotations</a></li>
+								<li><a href="" class="a">Schedule</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right t-center s-half">
+					<div class="container">
+						<div class="left s-half">
+							<ul>
+								<li><a href=""class="a">Privacy policy</a></li>
+								<li><a href=""class="a">T&C</a></li>
+								<li><a href=""class="a">Chat</a></li>
+							</ul>
+						</div>
+						<div class="right t-center s-half">
+							<ul>
+								<b>Follow Us</b>
+								<li><a target="_blank"href="https://wa.me/254700536326?text=Hello,%20Softtronic%20East%20Africa."class="a">Whatsapp</a></li>
+								<li><a href=""class="a">Twitter</a></li>
+								<li><a target="_blank"href="https://www.facebook.com/anthony.omukuyia.9/"class="a">Facebook</a></li>
+								<li><a href=""class="a">TikTok</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="developer" title="Web designer">
+			Copyright &copy; 2022 @Anthony +254796211581
+		</div>
+
+
+		<!--Back to the top-->
+
+		<div class="back-top" id="back-top">
+			<button class="top fn-bold position-absolute button" onclick="topFunction()" title="Scroll to the top">Top</button>
+		</div>
+		
+
+		<!--Auto pop up sign up form-->
+
+		<div id="id01" class="modal">
+			<span class="close" id="close-modal" title="Close Form">&times;</span>
+			<form class="modal-content" id="id03"  action="/sign_up.php" method="post">
+			  <div class="sign-container"id="id02">
+				<h1>Sign Up</h1>
+				<p>Please fill in this form to create an account.</p>
+				<hr>
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="Enter Email" name="email" required>
+		  
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+		  
+				<label for="psw-repeat"><b>Repeat Password</b></label>
+				<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+				
+				<label>
+				  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+				</label>
+		  
+				<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+		  
+				<div class="clearfix">
+				  <button type="button"class="cancelbtn modal-button" id="cancelbtn" title="Cancel">Cancel</button>
+				  <button type="submit" class="signupbtn modal-button" title="Submit">Sign Up</button>
+				</div>
+			</div>
+			</form>
+			<script>
+				document.getElementById("close-modal").addEventListener("click", closeModal);
+				document.getElementById("cancelbtn").addEventListener("click", closeModal);
+				window.addEventListener("scroll", function(){
+					const navID = ["nav001","nav002"];
+    				navID.forEach(addStickyClass);
+				});
+			</script>
+		  </div>
+		<script>
+			function onHover(){
+				for(let i = 100;i <= 107;i++){
+					if(document.body.offsetWidth > 650){
+						document.getElementById(i).addEventListener("mouseenter", function(){
+							document.getElementById(i + 100).style.display = "block";
+						});
+						document.getElementById(i).addEventListener("mouseleave", function(){
+							document.getElementById(i + 100).style.display = "none";
+						});
+					}
+				}
+			}
+			onHover();
+			window.addEventListener("resize", onHover);
+			
+			let slideIndex = 1;
+			let index = 1;
+			showSlide(slideIndex);
+			rotateSlide(index);
+			function plusSlide(n){
+				showSlide(slideIndex += n);
+				rotateSlide(index += n);
+			}
+			function startSlideShow(){
+				plusSlide(1);
+			}
+			function currentSlide(n) {
+				showSlide(slideIndex = n);
+				rotateSlide(index = n);
+			}
+			function showSlide(n){
+				let i;
+				let slide;
+				slide = document.getElementsByClassName("slides");
+				let dot = document.getElementsByClassName("dots");
+				if(n > slide.length){
+					slideIndex = 1;
+				}
+				if(n < 1){
+					slideIndex = slide.length;
+				}
+				for(i = 0; i < slide.length; i++){
+					slide[i].style.display = "none";
+				}
+				for (i = 0; i < dot.length; i++) {
+					dot[i].className = dot[i].className.replace(" active", "");
+				}
+				slide[slideIndex - 1].style.display = "block"; 
+				dot[slideIndex - 1].className += " active";
+			}	
+			function rotateSlide(n){
+				let i;
+				let slides = document.getElementsByClassName("slide-rotate");
+				if(n > slides.length){
+					index = 1;
+				}
+				if(n < 1){
+					index = slides.length;
+				}
+				for(i = 0; i<slides.length; i++){
+					slides[i].style.display = "none";
+				}
+				slides[index - 1].style.display = "block";
+			}
+			function  topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+	</body>
+</html>
